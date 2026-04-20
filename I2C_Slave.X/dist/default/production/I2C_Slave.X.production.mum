@@ -1,0 +1,8 @@
+
+16F873A Memory Summary:
+    Program space        used   69Eh (  1694) of  1000h words   ( 41.4%)
+    Data space           used    81h (   129) of    C0h bytes   ( 67.2%)
+    EEPROM space         used     0h (     0) of    80h bytes   (  0.0%)
+    Configuration bits   used     1h (     1) of     1h word    (100.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+

@@ -1,0 +1,471 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F873A ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.4v  1 e 1 0 ]
+[v i1_memcpy memcpy `(*.4v  1 e 1 0 ]
+"3 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+[v _memset memset `(*.4v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"112 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+[v _lcd_pulse_enable lcd_pulse_enable `(v  1 s 1 lcd_pulse_enable ]
+"119
+[v _lcd_send_nibble lcd_send_nibble `(v  1 s 1 lcd_send_nibble ]
+"124
+[v _lcd_send_byte lcd_send_byte `(v  1 s 1 lcd_send_byte ]
+"131
+[v _lcd_cmd lcd_cmd `(v  1 s 1 lcd_cmd ]
+"136
+[v _lcd_char lcd_char `(v  1 s 1 lcd_char ]
+"140
+[v _lcd_init lcd_init `(v  1 s 1 lcd_init ]
+"158
+[v _lcd_set_cursor lcd_set_cursor `(v  1 s 1 lcd_set_cursor ]
+"162
+[v _lcd_refresh lcd_refresh `(v  1 s 1 lcd_refresh ]
+"185
+[v _buzzer_beep buzzer_beep `(v  1 s 1 buzzer_beep ]
+"193
+[v _kb_scan kb_scan `(uc  1 s 1 kb_scan ]
+"215
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 s 1 I2C_Slave_Init ]
+"239
+[v _ISR ISR `II(v  1 e 1 0 ]
+"314
+[v _text_insert_char text_insert_char `(v  1 s 1 text_insert_char ]
+"324
+[v _text_replace_prev_char text_replace_prev_char `(v  1 s 1 text_replace_prev_char ]
+"329
+[v _text_delete text_delete `(v  1 s 1 text_delete ]
+"338
+[v _text_clear_send text_clear_send `(v  1 s 1 text_clear_send ]
+"346
+[v _multitap_commit multitap_commit `(v  1 s 1 multitap_commit ]
+"352
+[v _apply_case apply_case `(uc  1 s 1 apply_case ]
+"360
+[v _process_key process_key `(v  1 s 1 process_key ]
+"433
+[v _main main `(v  1 e 1 0 ]
+"164 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC16Fxxx_DFP/1.7.162/xc8\pic\include\proc/pic16f873a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+[s S22 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"179
+[u S29 . 1 `S22 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES29  1 e 1 @5 ]
+"214
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"276
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S52 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"293
+[u S61 . 1 `S52 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES61  1 e 1 @7 ]
+[s S138 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"381
+[s S147 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S152 . 1 `S138 1 . 1 0 `S147 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES152  1 e 1 @11 ]
+[s S100 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"452
+[u S108 . 1 `S100 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES108  1 e 1 @12 ]
+"706
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"713
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S170 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"733
+[s S176 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S181 . 1 `S170 1 . 1 0 `S176 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES181  1 e 1 @20 ]
+"1223
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1273
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1335
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+[s S75 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1352
+[u S84 . 1 `S75 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES84  1 e 1 @135 ]
+[s S119 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1413
+[u S127 . 1 `S119 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES127  1 e 1 @140 ]
+"1527
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+"1596
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"1603
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S197 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"1657
+[s S206 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S211 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S217 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S222 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S227 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S232 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S237 . 1 `S197 1 . 1 0 `S206 1 . 1 0 `S211 1 . 1 0 `S217 1 . 1 0 `S222 1 . 1 0 `S227 1 . 1 0 `S232 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES237  1 e 1 @148 ]
+"2002
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"76 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+[v _keyChars keyChars `[16]*.24DCuc  1 s 16 keyChars ]
+"84
+[v _sendBuf sendBuf `[15]uc  1 s 15 sendBuf ]
+"85
+[v _recvBuf recvBuf `[15]uc  1 s 15 recvBuf ]
+"86
+[v _cursorPos cursorPos `uc  1 s 1 cursorPos ]
+"87
+[v _sendLen sendLen `uc  1 s 1 sendLen ]
+"88
+[v _uppercase uppercase `uc  1 s 1 uppercase ]
+"91
+[v _lastKey lastKey `uc  1 s 1 lastKey ]
+"92
+[v _tapIndex tapIndex `uc  1 s 1 tapIndex ]
+"93
+[v _tapTimer tapTimer `us  1 s 2 tapTimer ]
+"96
+[v _txBuf txBuf `[15]uc  1 s 15 txBuf ]
+"97
+[v _txLen txLen `uc  1 s 1 txLen ]
+"98
+[v _txIdx txIdx `uc  1 s 1 txIdx ]
+"101
+[v _rxTmp rxTmp `[15]uc  1 s 15 rxTmp ]
+"102
+[v _rxExpected rxExpected `uc  1 s 1 rxExpected ]
+"103
+[v _rxIdx rxIdx `uc  1 s 1 rxIdx ]
+"104
+[v _rxState rxState `uc  1 s 1 rxState ]
+"107
+[v _newMsgFlag newMsgFlag `VEuc  1 s 1 newMsgFlag ]
+"108
+[v _refreshFlag refreshFlag `VEuc  1 s 1 refreshFlag ]
+"433
+[v _main main `(v  1 e 1 0 ]
+{
+"476
+[v main@key key `uc  1 a 1 3 ]
+"465
+[v main@prevKey prevKey `uc  1 a 1 2 ]
+"497
+} 0
+"360
+[v _process_key process_key `(v  1 s 1 process_key ]
+{
+[v process_key@key key `uc  1 p 1 wreg ]
+"413
+[v process_key@chars chars `*.24DCuc  1 a 1 36 ]
+"415
+[v process_key@len len `uc  1 a 1 35 ]
+"360
+[v process_key@key key `uc  1 p 1 wreg ]
+"362
+[v process_key@key key `uc  1 p 1 37 ]
+"429
+} 1
+"324
+[v _text_replace_prev_char text_replace_prev_char `(v  1 s 1 text_replace_prev_char ]
+{
+[v text_replace_prev_char@c c `uc  1 p 1 wreg ]
+[v text_replace_prev_char@c c `uc  1 p 1 wreg ]
+[v text_replace_prev_char@c c `uc  1 p 1 17 ]
+"327
+} 1
+"314
+[v _text_insert_char text_insert_char `(v  1 s 1 text_insert_char ]
+{
+[v text_insert_char@c c `uc  1 p 1 wreg ]
+"316
+[v text_insert_char@i i `c  1 a 1 19 ]
+"314
+[v text_insert_char@c c `uc  1 p 1 wreg ]
+[v text_insert_char@c c `uc  1 p 1 18 ]
+"322
+} 1
+"329
+[v _text_delete text_delete `(v  1 s 1 text_delete ]
+{
+"331
+[v text_delete@i i `uc  1 a 1 14 ]
+"336
+} 0
+"338
+[v _text_clear_send text_clear_send `(v  1 s 1 text_clear_send ]
+{
+"342
+} 0
+"3 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+[v _memset memset `(*.4v  1 e 1 0 ]
+{
+"5
+[v memset@p p `*.4uc  1 a 1 17 ]
+"3
+[v memset@dest dest `*.4v  1 p 1 12 ]
+[v memset@c c `i  1 p 2 13 ]
+[v memset@n n `ui  1 p 2 15 ]
+"10
+} 0
+"346 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+[v _multitap_commit multitap_commit `(v  1 s 1 multitap_commit ]
+{
+"350
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.4v  1 e 1 0 ]
+{
+"8
+[v memcpy@s s `*.4DCuc  1 a 1 18 ]
+"7
+[v memcpy@d d `*.4uc  1 a 1 17 ]
+"9
+[v memcpy@tmp tmp `uc  1 a 1 16 ]
+"4
+[v memcpy@d1 d1 `*.4v  1 p 1 12 ]
+[v memcpy@s1 s1 `*.4DCv  1 p 1 13 ]
+[v memcpy@n n `ui  1 p 2 14 ]
+"18
+} 0
+"162 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+[v _lcd_refresh lcd_refresh `(v  1 s 1 lcd_refresh ]
+{
+"163
+[v lcd_refresh@i i `uc  1 a 1 32 ]
+"174
+[v lcd_refresh@rLen rLen `uc  1 a 1 27 ]
+"181
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.26DCuc  1 a 2 14 ]
+"5
+[v strlen@s s `*.26DCuc  1 p 2 12 ]
+"12
+} 0
+"158 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+[v _lcd_set_cursor lcd_set_cursor `(v  1 s 1 lcd_set_cursor ]
+{
+[v lcd_set_cursor@col col `uc  1 p 1 wreg ]
+[v lcd_set_cursor@col col `uc  1 p 1 wreg ]
+[v lcd_set_cursor@row row `uc  1 p 1 21 ]
+[v lcd_set_cursor@col col `uc  1 p 1 24 ]
+"160
+} 1
+"136
+[v _lcd_char lcd_char `(v  1 s 1 lcd_char ]
+{
+[v lcd_char@c c `uc  1 p 1 wreg ]
+[v lcd_char@c c `uc  1 p 1 wreg ]
+[v lcd_char@c c `uc  1 p 1 18 ]
+"138
+} 1
+"185
+[v _buzzer_beep buzzer_beep `(v  1 s 1 buzzer_beep ]
+{
+[v buzzer_beep@duration_ms duration_ms `us  1 p 2 12 ]
+"189
+} 0
+"352
+[v _apply_case apply_case `(uc  1 s 1 apply_case ]
+{
+[v apply_case@c c `uc  1 p 1 wreg ]
+[v apply_case@c c `uc  1 p 1 wreg ]
+[v apply_case@c c `uc  1 p 1 16 ]
+"356
+} 1
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 17 ]
+[v ___awmod@counter counter `uc  1 a 1 16 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 12 ]
+[v ___awmod@dividend dividend `i  1 p 2 14 ]
+"34
+} 0
+"140 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+[v _lcd_init lcd_init `(v  1 s 1 lcd_init ]
+{
+"156
+} 0
+"131
+[v _lcd_cmd lcd_cmd `(v  1 s 1 lcd_cmd ]
+{
+[v lcd_cmd@cmd cmd `uc  1 p 1 wreg ]
+[v lcd_cmd@cmd cmd `uc  1 p 1 wreg ]
+[v lcd_cmd@cmd cmd `uc  1 p 1 20 ]
+"134
+} 1
+"124
+[v _lcd_send_byte lcd_send_byte `(v  1 s 1 lcd_send_byte ]
+{
+[v lcd_send_byte@rs rs `uc  1 p 1 wreg ]
+[v lcd_send_byte@rs rs `uc  1 p 1 wreg ]
+[v lcd_send_byte@data data `uc  1 p 1 15 ]
+[v lcd_send_byte@rs rs `uc  1 p 1 17 ]
+"129
+} 1
+"119
+[v _lcd_send_nibble lcd_send_nibble `(v  1 s 1 lcd_send_nibble ]
+{
+[v lcd_send_nibble@nibble nibble `uc  1 p 1 wreg ]
+[v lcd_send_nibble@nibble nibble `uc  1 p 1 wreg ]
+[v lcd_send_nibble@nibble nibble `uc  1 p 1 14 ]
+"122
+} 1
+"112
+[v _lcd_pulse_enable lcd_pulse_enable `(v  1 s 1 lcd_pulse_enable ]
+{
+"117
+} 0
+"193
+[v _kb_scan kb_scan `(uc  1 s 1 kb_scan ]
+{
+"201
+[v kb_scan@cols cols `uc  1 a 1 13 ]
+"194
+[v kb_scan@col col `uc  1 a 1 15 ]
+[v kb_scan@row row `uc  1 a 1 14 ]
+"211
+} 0
+"215
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 s 1 I2C_Slave_Init ]
+{
+"233
+} 0
+"239
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"262
+[v ISR@data data `uc  1 a 1 11 ]
+"250
+[v ISR@status status `uc  1 a 1 10 ]
+"310
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
+[v i1_memcpy memcpy `(*.4v  1 e 1 0 ]
+{
+"8
+[v i1memcpy@s s `*.4DCuc  1 a 1 6 ]
+"7
+[v i1memcpy@d d `*.4uc  1 a 1 5 ]
+"9
+[v i1memcpy@tmp tmp `uc  1 a 1 4 ]
+"4
+[v i1memcpy@d1 d1 `*.4v  1 p 1 0 ]
+[v i1memcpy@s1 s1 `*.4DCv  1 p 1 1 ]
+[v i1memcpy@n n `ui  1 p 2 2 ]
+"18
+} 0
