@@ -48,17 +48,17 @@
 
 /* ============ Constants ============ */
 #define LCD_COLS            16
-#define MSG_LEN             13
+#define MSG_LEN             13  // Usable chars per line (16 - 3 for "S: ")
 #define DEBOUNCE_MS         50
 #define MULTITAP_TIMEOUT_MS 800
 #define POLL_INTERVAL       500
 
 #define KEY_CURSOR_LEFT     3
 #define KEY_CURSOR_RIGHT    7
-#define KEY_DELETE          11
+#define KEY_DELETE           11
 #define KEY_TOGGLE_CASE     12
 #define KEY_SEND            14  // '#' ? send message
-#define KEY_CONFIRM         15
+#define KEY_CONFIRM         15  // 'D' ? commit multitap
 #define KEY_NONE            0xFF
 
 /* ============ T9 Keymap ============ */
@@ -197,58 +197,50 @@ static void I2C_Wait(void) {
 
 static void I2C_Start(void) {
     I2C_Wait();
-    PIR1bits.SSPIF = 0;
+    PIR1bits.SSPIF = 0;   
     SSPCON2bits.SEN = 1;
-    while (!PIR1bits.SSPIF);  // Wait for START to complete
-    PIR1bits.SSPIF = 0;
+    while(!PIR1bits.SSPIF);
 }
 
 static void I2C_Stop(void) {
     I2C_Wait();
-    PIR1bits.SSPIF = 0;
+    PIR1bits.SSPIF = 0;     // Limpiar antes de iniciar
     SSPCON2bits.PEN = 1;
-    while (!PIR1bits.SSPIF);  // Wait for STOP to complete
-    PIR1bits.SSPIF = 0;
+    while(!PIR1bits.SSPIF); 
 }
 
 static unsigned char I2C_Write(unsigned char data) {
-    I2C_Wait();
-    PIR1bits.SSPIF = 0;
-    SSPBUF = data;
-    while (!PIR1bits.SSPIF);  // Wait for transmission + ACK/NACK
-    PIR1bits.SSPIF = 0;
-    return SSPCON2bits.ACKSTAT;  // 0=ACK, 1=NACK
+    PIR1bits.SSPIF = 0; 
+    SSPBUF = data;         
+    while(!PIR1bits.SSPIF);
+    return SSPCON2bits.ACKSTAT;
 }
 
 static unsigned char I2C_Read(void) {
     I2C_Wait();
-    PIR1bits.SSPIF = 0;
-    SSPCON2bits.RCEN = 1;         // Enable receive
-    while (!PIR1bits.SSPIF);      // Wait for byte to arrive
-    PIR1bits.SSPIF = 0;
-    unsigned char data = SSPBUF;  // Read data
-    return data;
+    PIR1bits.SSPIF = 0;  
+    SSPCON2bits.RCEN = 1;    
+    while(!PIR1bits.SSPIF);
+    return SSPBUF;
 }
 
 static void I2C_Ack(void) {
     I2C_Wait();
+    SSPCON2bits.ACKDT = 0;
     PIR1bits.SSPIF = 0;
-    SSPCON2bits.ACKDT = 0;  // ACK
     SSPCON2bits.ACKEN = 1;
-    while (!PIR1bits.SSPIF);  // Wait for ACK to be sent
-    PIR1bits.SSPIF = 0;
+    while(!PIR1bits.SSPIF);
 }
 
 static void I2C_Nack(void) {
     I2C_Wait();
-    PIR1bits.SSPIF = 0;
     SSPCON2bits.ACKDT = 1;  // NACK
     SSPCON2bits.ACKEN = 1;
-    while (!PIR1bits.SSPIF);  // Wait for NACK to be sent
-    PIR1bits.SSPIF = 0;
+    while (SSPCON2bits.ACKEN);
 }
 
 /* ============ I2C Send Message to Slave ============ */
+// Protocol: START ? addr+W ? len ? data[0..len-1] ? STOP
 static void I2C_SendMessage(const char *msg, uint8_t len) {
     I2C_Start();
     if (I2C_Write(SLAVE_ADDR_W)) {  // NACK = slave not present
@@ -286,13 +278,18 @@ static uint8_t I2C_PollMessage(char *buf, uint8_t maxLen) {
 
     for (uint8_t i = 0; i < len; i++) {
         buf[i] = (char)I2C_Read();
+        if (buf[i] == (char)0xFF) {
+            I2C_Nack();
+            I2C_Stop();
+            buf[i] = '\0';
+            return i;
+        }
         if (i < len - 1)
-            I2C_Ack();     // ACK all bytes except last
+            I2C_Ack();
         else
-            I2C_Nack();    // NACK last byte to signal end
+            I2C_Nack();
     }
     buf[len] = '\0';
-
     I2C_Stop();
     return len;
 }

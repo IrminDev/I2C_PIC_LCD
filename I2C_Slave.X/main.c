@@ -6,15 +6,11 @@
  *   Line 2: "R: <received message>" (receive buffer)
  *   '#' queues message for master to read. Master writes arrive via interrupt.
  *
- * Wiring (PIC16F873A):
- *   LCD D4-D7  -> RA2-RA5  (RA4 needs external pull-up, open-drain)
- *   LCD RS     -> RA0
- *   LCD EN     -> RA1
- *   KB Rows    -> RB0-RB3 (output)
- *   KB Cols    -> RB4-RB7 (input, external pull-ups)
- *   I2C SCL    -> RC3
- *   I2C SDA    -> RC4
- *   Buzzer     -> RC0
+ * Protocol (matching master):
+ *   Master write ? slave: len + data[0..len-1]
+ *   Master read  ? slave: len + data[0..len-1]
+ *
+ * Wiring: same as master (LCD on PORTA, KB on PORTB, I2C on RC3/RC4, buzzer RC0)
  */
 
 #pragma config FOSC  = XT
@@ -36,11 +32,10 @@
 #define LCD_EN      PORTAbits.RA1
 
 #define KB_PORT     PORTB
-#define KB_TRIS     TRISB
 
 #define BUZZER      PORTCbits.RC0
 
-#define SLAVE_ADDR  0x10    // 7-bit address
+#define SLAVE_ADDR  0x10
 
 #define LCD_COLS            16
 #define MSG_LEN             13
@@ -62,7 +57,6 @@ static const char *keyChars[16] = {
     NULL,     " 0",   NULL,    NULL
 };
 
-/* ============ Buffers ============ */
 static char     sendBuf[MSG_LEN + 1];
 static char     recvBuf[MSG_LEN + 1];
 static uint8_t  cursorPos;
@@ -73,32 +67,32 @@ static uint8_t  lastKey;
 static uint8_t  tapIndex;
 static uint16_t tapTimer;
 
-// I2C TX: message queued for master to read
+// TX: pending message for master to read
 static volatile char     txBuf[MSG_LEN + 1];
-static volatile uint8_t  txLen;       // 0 = no pending message
-static volatile uint8_t  txIdx;       // Byte index during master-read
-static volatile uint8_t  txSentLen;   // Tracks if length byte was already sent
+static volatile uint8_t  txLen;
+static volatile uint8_t  txIdx;
+static volatile uint8_t  txConsumed;  // Flag: master finished reading
 
-// I2C RX: incoming message from master
+// RX: message being received from master
 static volatile char     rxTmp[MSG_LEN + 1];
 static volatile uint8_t  rxExpected;
 static volatile uint8_t  rxIdx;
-static volatile uint8_t  rxState;     // 0=waiting for len byte, 1=receiving data
+static volatile uint8_t  rxState;     // 0=expect len, 1=expect data
 
-// Flag: ISR sets when a complete message arrives
 static volatile uint8_t  newMsgFlag;
 
-/* ============ LCD Functions (PORTA) ============ */
+/* ============ LCD (PORTA) ============ */
 
 static void lcd_pulse_enable(void) {
     LCD_EN = 1;
-    __delay_us(2);
+    __delay_us(4);
     LCD_EN = 0;
     __delay_us(100);
 }
 
 static void lcd_send_nibble(uint8_t nibble) {
-    PORTA = (PORTA & 0x03) | ((nibble & 0x0F) << 2);
+    uint8_t tmp = PORTA & 0x03;
+    PORTA = tmp | ((nibble & 0x0F) << 2);
     lcd_pulse_enable();
 }
 
@@ -107,33 +101,37 @@ static void lcd_send_byte(uint8_t rs, uint8_t data) {
     __delay_us(5);
     lcd_send_nibble(data >> 4);
     lcd_send_nibble(data & 0x0F);
-    __delay_us(100);
+    __delay_us(120);
 }
 
 static void lcd_cmd(uint8_t cmd) {
     lcd_send_byte(0, cmd);
-    if (cmd <= 0x03) __delay_ms(2);
+    if (cmd <= 0x03) __delay_ms(3);
 }
 
 static void lcd_char(char c) {
     lcd_send_byte(1, (uint8_t)c);
 }
 
+static void lcd_print(const char *str) {
+    while (*str) lcd_char(*str++);
+}
+
 static void lcd_init(void) {
     PORTA = 0x00;
-    __delay_ms(30);
+    __delay_ms(40);
 
     LCD_RS = 0;
     lcd_send_nibble(0x03); __delay_ms(5);
     lcd_send_nibble(0x03); __delay_ms(1);
     lcd_send_nibble(0x03); __delay_ms(1);
-    lcd_send_nibble(0x02); __delay_ms(1);
+    lcd_send_nibble(0x02); __delay_ms(2);
 
     lcd_cmd(0x28);
     lcd_cmd(0x0C);
     lcd_cmd(0x06);
     lcd_cmd(0x01);
-    __delay_ms(2);
+    __delay_ms(3);
 }
 
 static void lcd_set_cursor(uint8_t col, uint8_t row) {
@@ -150,7 +148,7 @@ static void lcd_refresh(void) {
 
     lcd_set_cursor(0, 1);
     lcd_char('R'); lcd_char(':'); lcd_char(' ');
-    uint8_t rLen = (uint8_t)strlen((const char*)recvBuf);
+    uint8_t rLen = (uint8_t)strlen((const char *)recvBuf);
     for (i = 0; i < MSG_LEN; i++)
         lcd_char((i < rLen) ? recvBuf[i] : ' ');
 
@@ -172,9 +170,9 @@ static uint8_t kb_scan(void) {
     uint8_t row, col;
     for (row = 0; row < 4; row++) {
         TRISB = 0xF0;
-        KB_PORT = (~(1 << row)) & 0x0F;
+        PORTB = (~(1 << row)) & 0x0F;
         __delay_us(10);
-        uint8_t cols = (KB_PORT >> 4) & 0x0F;
+        uint8_t cols = (PORTB >> 4) & 0x0F;
         if (cols != 0x0F) {
             for (col = 0; col < 4; col++) {
                 if (!(cols & (1 << col)))
@@ -182,143 +180,107 @@ static uint8_t kb_scan(void) {
             }
         }
     }
-    KB_PORT = 0x0F;
+    PORTB = 0x0F;
     return KEY_NONE;
 }
 
 /* ============ I2C Slave Init ============ */
 
 static void I2C_Slave_Init(void) {
-    TRISCbits.TRISC3 = 1;          // SCL
-    TRISCbits.TRISC4 = 1;          // SDA
-    SSPADD  = SLAVE_ADDR << 1;     // Load 7-bit address
-    SSPSTAT = 0x80;                 // Slew rate disabled
-    SSPCON  = 0x26;                 // SSP enabled, slave 7-bit mode, CKP released
-    SSPCON2 = 0x00;                 // No general call, SEN=0
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 1;
+    SSPADD  = SLAVE_ADDR << 1;   // 0x10 << 1 = 0x20
+    SSPSTAT = 0x80;               // Slew rate off
+    SSPCON  = 0x36;               // SSP on, slave 7-bit, CKP=1
+    SSPCON2 = 0x01;               // SEN=1 (clock stretching)
 
-    // Reset state
     rxState    = 0;
     rxIdx      = 0;
     rxExpected = 0;
     txLen      = 0;
     txIdx      = 0;
-    txSentLen  = 0;
+    txConsumed = 0;
 
-    // Enable SSP interrupt
     PIR1bits.SSPIF = 0;
     PIE1bits.SSPIE = 1;
     INTCONbits.PEIE = 1;
     INTCONbits.GIE  = 1;
 }
 
-/* ============ I2C Interrupt Handler ============ */
-
-static void i2c_load_tx_byte(uint8_t value) {
-    // Guard SSPBUF writes against write-collision side effects.
-    SSPCONbits.WCOL = 0;
-    SSPBUF = value;
-    if (SSPCONbits.WCOL) {
-        SSPCONbits.WCOL = 0;
-    }
-}
+/* ============ I2C ISR ============ */
 
 void __interrupt() ISR(void) {
     if (!PIR1bits.SSPIF) return;
 
-    volatile uint8_t dummy;
+    unsigned char dummy;
 
-    // Ignore and clear bus-collision events before continuing normal slave flow.
-    if (PIR2bits.BCLIF) {
-        PIR2bits.BCLIF = 0;
-        PIR1bits.SSPIF = 0;
-        SSPCONbits.CKP = 1;
-        return;
-    }
-
-    // Clear overflow if any
+    // Clear overflow
     if (SSPCONbits.SSPOV) {
         SSPCONbits.SSPOV = 0;
-        if (SSPSTATbits.BF) dummy = SSPBUF;
-        PIR1bits.SSPIF = 0;
-        SSPCONbits.CKP = 1;
-        return;
+        dummy = SSPBUF;
     }
 
-    // --- MASTER WRITES to slave (slave is receiving) ---
-    // R_nW=0: write operation from master's perspective
+    /* ---- Master writes to slave (slave receives) ---- */
     if (!SSPSTATbits.R_nW) {
+
         if (!SSPSTATbits.D_nA) {
-            // Address byte matched ? reset RX state machine
-            if (!SSPSTATbits.BF) {
-                PIR1bits.SSPIF = 0;
-                SSPCONbits.CKP = 1;
-                return;
-            }
-            dummy = SSPBUF;         // Read to clear BF
+            // Address match ? clear BF, reset RX state
+            dummy = SSPBUF;
             rxState    = 0;
             rxIdx      = 0;
             rxExpected = 0;
         } else {
             // Data byte from master
-            if (!SSPSTATbits.BF) {
-                PIR1bits.SSPIF = 0;
-                SSPCONbits.CKP = 1;
-                return;
-            }
-            uint8_t data = SSPBUF;
+            unsigned char data = SSPBUF;
 
             if (rxState == 0) {
-                // First data byte = message length
+                // First byte = message length
                 rxExpected = data;
-                if (rxExpected > MSG_LEN) rxExpected = MSG_LEN;
-                rxIdx   = 0;
-                rxState = 1;
+                if (rxExpected > MSG_LEN)
+                    rxExpected = MSG_LEN;
+                rxIdx = 0;
+                if (rxExpected > 0)
+                    rxState = 1;
             } else {
-                // Message content bytes
-                if (rxIdx < rxExpected) {
+                // Content bytes
+                if (rxIdx < rxExpected)
                     rxTmp[rxIdx++] = (char)data;
-                }
+
                 if (rxIdx >= rxExpected) {
-                    // Complete message ? copy to recvBuf
+                    // Complete ? copy to recvBuf byte by byte
                     rxTmp[rxIdx] = '\0';
-                    memcpy((void*)recvBuf, (const void*)rxTmp, rxIdx + 1);
+                    for (uint8_t k = 0; k <= rxIdx; k++)
+                        recvBuf[k] = rxTmp[k];
                     newMsgFlag = 1;
                     rxState = 0;
                 }
             }
         }
-        SSPCONbits.CKP = 1;  // Release clock
+    }
 
-    // --- MASTER READS from slave (slave is transmitting) ---
-    // R_nW=1: master wants to read
-    } else {
+    /* ---- Master reads from slave (slave transmits) ---- */
+    else {
+
         if (!SSPSTATbits.D_nA) {
-            // Address byte matched (read mode) ? prepare first byte (length)
-            if (!SSPSTATbits.BF) {
-                PIR1bits.SSPIF = 0;
-                SSPCONbits.CKP = 1;
-                return;
-            }
-            dummy = SSPBUF;         // Clear BF
-            txIdx     = 0;
-            txSentLen = 0;
-            // Load length byte into buffer
-            i2c_load_tx_byte(txLen);
-            txSentLen = 1;
+            // Address match (read) ? send length as first byte
+            dummy = SSPBUF;
+            txIdx = 0;
+            SSPBUF = txLen;
         } else {
-            // Master requesting next data byte
+            // Master wants next data byte
             if (txLen > 0 && txIdx < txLen) {
-                i2c_load_tx_byte((unsigned char)txBuf[txIdx++]);
-                // If last byte sent, clear TX buffer
-                if (txIdx >= txLen) {
-                    txLen = 0;
-                }
+                SSPBUF = (unsigned char)txBuf[txIdx++];
+                // Mark consumed when last byte loaded
+                if (txIdx >= txLen)
+                    txConsumed = 1;
             } else {
-                i2c_load_tx_byte(0x00);  // No data / padding
+                SSPBUF = 0x00;
             }
         }
-        SSPCONbits.CKP = 1;  // Release clock to allow master to clock out byte
     }
+
+    // Release clock ? MUST be done for every interrupt
+    SSPCONbits.CKP = 1;
 
     PIR1bits.SSPIF = 0;
 }
@@ -399,15 +361,19 @@ static void process_key(uint8_t key) {
     if (key == KEY_SEND) {
         multitap_commit();
         if (sendLen > 0) {
-            // Disable interrupt to safely update shared TX buffer
-            PIE1bits.SSPIE = 0;
-            memcpy((void*)txBuf, sendBuf, sendLen + 1);
+            // Atomic update of TX buffer
+            INTCONbits.GIE = 0;
+            for (uint8_t k = 0; k <= sendLen; k++)
+                txBuf[k] = sendBuf[k];
             txLen = sendLen;
             txIdx = 0;
-            PIE1bits.SSPIE = 1;
+            txConsumed = 0;
+            INTCONbits.GIE = 1;
 
             text_clear_send();
-            buzzer_beep(150);
+            buzzer_beep(100);
+            __delay_ms(50);
+            buzzer_beep(100);
         }
         lcd_refresh();
         return;
@@ -419,7 +385,6 @@ static void process_key(uint8_t key) {
         return;
     }
 
-    // T9 multitap
     const char *chars = keyChars[key];
     if (chars == NULL) return;
     uint8_t len = (uint8_t)strlen(chars);
@@ -441,12 +406,11 @@ static void process_key(uint8_t key) {
 /* ============ Main ============ */
 
 void main(void) {
-    // FIRST: Make PORTA digital
     ADCON1 = 0x07;
 
     TRISA  = 0x00;
     TRISB  = 0xF0;
-    TRISC  = 0x18;      // RC3,RC4 I2C, RC0 buzzer
+    TRISC  = 0x18;
     PORTA  = 0x00;
     PORTB  = 0x0F;
     PORTC  = 0x00;
@@ -455,8 +419,9 @@ void main(void) {
     I2C_Slave_Init();
 
     memset(sendBuf, 0, sizeof(sendBuf));
-    memset((void*)recvBuf, 0, sizeof(recvBuf));
-    memset((void*)txBuf, 0, sizeof(txBuf));
+    memset((void *)recvBuf, 0, sizeof(recvBuf));
+    memset((void *)txBuf, 0, sizeof(txBuf));
+    memset((void *)rxTmp, 0, sizeof(rxTmp));
     cursorPos  = 0;
     sendLen    = 0;
     uppercase  = 1;
@@ -464,22 +429,37 @@ void main(void) {
     tapIndex   = 0;
     tapTimer   = 0;
     newMsgFlag = 0;
+    txConsumed = 0;
 
+    lcd_refresh();
+
+    lcd_set_cursor(0, 1);
+    lcd_print("R:              ");
+    __delay_ms(1000);
     lcd_refresh();
 
     uint8_t prevKey = KEY_NONE;
 
     while (1) {
-        // --- Check for received message from ISR ---
+        // Safely clear TX buffer after master consumed it
+        if (txConsumed) {
+            INTCONbits.GIE = 0;
+            txLen = 0;
+            txConsumed = 0;
+            INTCONbits.GIE = 1;
+        }
+
+        // New message received from master
         if (newMsgFlag) {
             newMsgFlag = 0;
-            buzzer_beep(120);
+            buzzer_beep(80);
+            __delay_ms(30);
+            buzzer_beep(80);
             lcd_refresh();
         }
 
-        // --- Keyboard ---
+        // Keyboard
         uint8_t key = kb_scan();
-
         if (key != KEY_NONE && key != prevKey) {
             __delay_ms(DEBOUNCE_MS);
             if (kb_scan() == key) {
@@ -491,7 +471,7 @@ void main(void) {
             prevKey = KEY_NONE;
         }
 
-        // --- Multitap timeout ---
+        // Multitap timeout
         if (tapTimer > 0) {
             tapTimer--;
             if (tapTimer == 0) multitap_commit();

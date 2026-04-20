@@ -5,9 +5,6 @@
 [d frameptr 0 ]
 "5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-[v _memcpy memcpy `(*.4v  1 e 1 0 ]
-[v i1_memcpy memcpy `(*.4v  1 e 1 0 ]
 "3 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
 [v _memset memset `(*.4v  1 e 1 0 ]
 "10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
@@ -20,45 +17,47 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"89 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+"86 C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
 [v _lcd_pulse_enable lcd_pulse_enable `(v  1 s 1 lcd_pulse_enable ]
-"96
+"93
 [v _lcd_send_nibble lcd_send_nibble `(v  1 s 1 lcd_send_nibble ]
-"101
+"99
 [v _lcd_send_byte lcd_send_byte `(v  1 s 1 lcd_send_byte ]
-"109
+"107
 [v _lcd_cmd lcd_cmd `(v  1 s 1 lcd_cmd ]
-"114
+"112
 [v _lcd_char lcd_char `(v  1 s 1 lcd_char ]
-"118
+"116
+[v _lcd_print lcd_print `(v  1 s 1 lcd_print ]
+"120
 [v _lcd_init lcd_init `(v  1 s 1 lcd_init ]
-"135
+"137
 [v _lcd_set_cursor lcd_set_cursor `(v  1 s 1 lcd_set_cursor ]
-"139
+"141
 [v _lcd_refresh lcd_refresh `(v  1 s 1 lcd_refresh ]
-"159
+"161
 [v _buzzer_beep buzzer_beep `(v  1 s 1 buzzer_beep ]
-"167
+"169
 [v _kb_scan kb_scan `(uc  1 s 1 kb_scan ]
-"187
+"189
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 s 1 I2C_Slave_Init ]
 "212
 [v _ISR ISR `II(v  1 e 1 0 ]
-"289
+"290
 [v _text_insert_char text_insert_char `(v  1 s 1 text_insert_char ]
-"299
+"300
 [v _text_replace_prev_char text_replace_prev_char `(v  1 s 1 text_replace_prev_char ]
-"304
+"305
 [v _text_delete text_delete `(v  1 s 1 text_delete ]
-"313
+"314
 [v _text_clear_send text_clear_send `(v  1 s 1 text_clear_send ]
-"319
+"320
 [v _multitap_commit multitap_commit `(v  1 s 1 multitap_commit ]
-"325
+"326
 [v _apply_case apply_case `(uc  1 s 1 apply_case ]
-"333
+"334
 [v _process_key process_key `(v  1 s 1 process_key ]
-"404
+"408
 [v _main main `(v  1 e 1 0 ]
 "164 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC16Fxxx_DFP/1.7.162/xc8\pic\include\proc/pic16f873a.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -214,232 +213,228 @@
 [v _SSPSTATbits SSPSTATbits `VES236  1 e 1 @148 ]
 "2002
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
-"54 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+"53 C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
 [v _keyChars keyChars `[16]*.24DCuc  1 s 16 keyChars ]
-"62
+"60
 [v _sendBuf sendBuf `[14]uc  1 s 14 sendBuf ]
-"63
+"61
 [v _recvBuf recvBuf `[14]uc  1 s 14 recvBuf ]
-"64
+"62
 [v _cursorPos cursorPos `uc  1 s 1 cursorPos ]
-"65
+"63
 [v _sendLen sendLen `uc  1 s 1 sendLen ]
-"66
+"64
 [v _uppercase uppercase `uc  1 s 1 uppercase ]
-"68
+"66
 [v _lastKey lastKey `uc  1 s 1 lastKey ]
-"69
+"67
 [v _tapIndex tapIndex `uc  1 s 1 tapIndex ]
-"70
+"68
 [v _tapTimer tapTimer `us  1 s 2 tapTimer ]
-"73
+"71
 [v _txBuf txBuf `VE[14]uc  1 s 14 txBuf ]
-"74
+"72
 [v _txLen txLen `VEuc  1 s 1 txLen ]
-"75
+"73
 [v _txIdx txIdx `VEuc  1 s 1 txIdx ]
-"76
-[v _txSentLen txSentLen `VEuc  1 s 1 txSentLen ]
-"79
+"74
+[v _txConsumed txConsumed `VEuc  1 s 1 txConsumed ]
+"77
 [v _rxTmp rxTmp `VE[14]uc  1 s 14 rxTmp ]
-"80
+"78
 [v _rxExpected rxExpected `VEuc  1 s 1 rxExpected ]
-"81
+"79
 [v _rxIdx rxIdx `VEuc  1 s 1 rxIdx ]
-"82
+"80
 [v _rxState rxState `VEuc  1 s 1 rxState ]
-"85
+"82
 [v _newMsgFlag newMsgFlag `VEuc  1 s 1 newMsgFlag ]
-"404
+"408
 [v _main main `(v  1 e 1 0 ]
 {
-"442
-[v main@key key `uc  1 a 1 40 ]
-"431
-[v main@prevKey prevKey `uc  1 a 1 39 ]
-"463
+"462
+[v main@key key `uc  1 a 1 38 ]
+"441
+[v main@prevKey prevKey `uc  1 a 1 37 ]
+"482
 } 0
-"333
+"334
 [v _process_key process_key `(v  1 s 1 process_key ]
 {
 [v process_key@key key `uc  1 p 1 wreg ]
-"384
-[v process_key@chars chars `*.24DCuc  1 a 1 35 ]
-"386
-[v process_key@len len `uc  1 a 1 34 ]
-"333
+"366
+[v process_key@k k `uc  1 a 1 31 ]
+"388
+[v process_key@chars chars `*.24DCuc  1 a 1 32 ]
+"390
+[v process_key@len len `uc  1 a 1 30 ]
+"334
 [v process_key@key key `uc  1 p 1 wreg ]
-[v process_key@key key `uc  1 p 1 36 ]
-"400
+[v process_key@key key `uc  1 p 1 33 ]
+"404
 } 1
-"299
+"300
 [v _text_replace_prev_char text_replace_prev_char `(v  1 s 1 text_replace_prev_char ]
 {
 [v text_replace_prev_char@c c `uc  1 p 1 wreg ]
 [v text_replace_prev_char@c c `uc  1 p 1 wreg ]
-[v text_replace_prev_char@c c `uc  1 p 1 16 ]
-"302
+[v text_replace_prev_char@c c `uc  1 p 1 11 ]
+"303
 } 1
-"289
+"290
 [v _text_insert_char text_insert_char `(v  1 s 1 text_insert_char ]
 {
 [v text_insert_char@c c `uc  1 p 1 wreg ]
-"291
-[v text_insert_char@i i `c  1 a 1 18 ]
-"289
+"292
+[v text_insert_char@i i `c  1 a 1 13 ]
+"290
 [v text_insert_char@c c `uc  1 p 1 wreg ]
-[v text_insert_char@c c `uc  1 p 1 17 ]
-"297
+[v text_insert_char@c c `uc  1 p 1 12 ]
+"298
 } 1
-"304
+"305
 [v _text_delete text_delete `(v  1 s 1 text_delete ]
 {
-"306
-[v text_delete@i i `uc  1 a 1 13 ]
-"311
+"307
+[v text_delete@i i `uc  1 a 1 8 ]
+"312
 } 0
-"313
+"314
 [v _text_clear_send text_clear_send `(v  1 s 1 text_clear_send ]
 {
-"317
+"318
 } 0
 "3 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
 [v _memset memset `(*.4v  1 e 1 0 ]
 {
 "5
-[v memset@p p `*.4uc  1 a 1 16 ]
+[v memset@p p `*.4uc  1 a 1 11 ]
 "3
-[v memset@dest dest `*.4v  1 p 1 11 ]
-[v memset@c c `i  1 p 2 12 ]
-[v memset@n n `ui  1 p 2 14 ]
+[v memset@dest dest `*.4v  1 p 1 6 ]
+[v memset@c c `i  1 p 2 7 ]
+[v memset@n n `ui  1 p 2 9 ]
 "10
 } 0
-"319 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+"320 C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
 [v _multitap_commit multitap_commit `(v  1 s 1 multitap_commit ]
 {
-"323
+"324
 } 0
-"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-[v _memcpy memcpy `(*.4v  1 e 1 0 ]
-{
-"8
-[v memcpy@s s `*.4DCuc  1 a 1 17 ]
-"7
-[v memcpy@d d `*.4uc  1 a 1 16 ]
-"9
-[v memcpy@tmp tmp `uc  1 a 1 15 ]
-"4
-[v memcpy@d1 d1 `*.4v  1 p 1 11 ]
-[v memcpy@s1 s1 `*.4DCv  1 p 1 12 ]
-[v memcpy@n n `ui  1 p 2 13 ]
-"18
-} 0
-"139 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+"141
 [v _lcd_refresh lcd_refresh `(v  1 s 1 lcd_refresh ]
 {
-"140
-[v lcd_refresh@i i `uc  1 a 1 31 ]
-"149
-[v lcd_refresh@rLen rLen `uc  1 a 1 30 ]
-"155
+"142
+[v lcd_refresh@i i `uc  1 a 1 27 ]
+"151
+[v lcd_refresh@rLen rLen `uc  1 a 1 26 ]
+"157
 } 0
 "5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 {
 "7
-[v strlen@a a `*.26DCuc  1 a 2 13 ]
+[v strlen@a a `*.26DCuc  1 a 2 8 ]
 "5
-[v strlen@s s `*.26DCuc  1 p 2 11 ]
+[v strlen@s s `*.26DCuc  1 p 2 6 ]
 "12
 } 0
-"135 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+"137 C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
 [v _lcd_set_cursor lcd_set_cursor `(v  1 s 1 lcd_set_cursor ]
 {
 [v lcd_set_cursor@col col `uc  1 p 1 wreg ]
 [v lcd_set_cursor@col col `uc  1 p 1 wreg ]
-[v lcd_set_cursor@row row `uc  1 p 1 20 ]
-[v lcd_set_cursor@col col `uc  1 p 1 23 ]
-"137
+[v lcd_set_cursor@row row `uc  1 p 1 16 ]
+[v lcd_set_cursor@col col `uc  1 p 1 19 ]
+"139
 } 1
-"114
-[v _lcd_char lcd_char `(v  1 s 1 lcd_char ]
-{
-[v lcd_char@c c `uc  1 p 1 wreg ]
-[v lcd_char@c c `uc  1 p 1 wreg ]
-[v lcd_char@c c `uc  1 p 1 17 ]
-"116
-} 1
-"159
+"161
 [v _buzzer_beep buzzer_beep `(v  1 s 1 buzzer_beep ]
 {
-[v buzzer_beep@duration_ms duration_ms `us  1 p 2 11 ]
-"163
+[v buzzer_beep@duration_ms duration_ms `us  1 p 2 6 ]
+"165
 } 0
-"325
+"326
 [v _apply_case apply_case `(uc  1 s 1 apply_case ]
 {
 [v apply_case@c c `uc  1 p 1 wreg ]
 [v apply_case@c c `uc  1 p 1 wreg ]
-[v apply_case@c c `uc  1 p 1 15 ]
-"329
+[v apply_case@c c `uc  1 p 1 10 ]
+"330
 } 1
 "5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 16 ]
-[v ___awmod@counter counter `uc  1 a 1 15 ]
+[v ___awmod@sign sign `uc  1 a 1 11 ]
+[v ___awmod@counter counter `uc  1 a 1 10 ]
 "5
-[v ___awmod@divisor divisor `i  1 p 2 11 ]
-[v ___awmod@dividend dividend `i  1 p 2 13 ]
+[v ___awmod@divisor divisor `i  1 p 2 6 ]
+[v ___awmod@dividend dividend `i  1 p 2 8 ]
 "34
 } 0
-"118 C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
+"116 C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+[v _lcd_print lcd_print `(v  1 s 1 lcd_print ]
+{
+[v lcd_print@str str `*.24DCuc  1 p 1 14 ]
+"118
+} 0
+"112
+[v _lcd_char lcd_char `(v  1 s 1 lcd_char ]
+{
+[v lcd_char@c c `uc  1 p 1 wreg ]
+[v lcd_char@c c `uc  1 p 1 wreg ]
+[v lcd_char@c c `uc  1 p 1 13 ]
+"114
+} 1
+"120
 [v _lcd_init lcd_init `(v  1 s 1 lcd_init ]
 {
-"133
+"135
 } 0
-"109
+"107
 [v _lcd_cmd lcd_cmd `(v  1 s 1 lcd_cmd ]
 {
 [v lcd_cmd@cmd cmd `uc  1 p 1 wreg ]
 [v lcd_cmd@cmd cmd `uc  1 p 1 wreg ]
-[v lcd_cmd@cmd cmd `uc  1 p 1 19 ]
-"112
+[v lcd_cmd@cmd cmd `uc  1 p 1 15 ]
+"110
 } 1
-"101
+"99
 [v _lcd_send_byte lcd_send_byte `(v  1 s 1 lcd_send_byte ]
 {
 [v lcd_send_byte@rs rs `uc  1 p 1 wreg ]
 [v lcd_send_byte@rs rs `uc  1 p 1 wreg ]
-[v lcd_send_byte@data data `uc  1 p 1 14 ]
-[v lcd_send_byte@rs rs `uc  1 p 1 16 ]
-"107
+[v lcd_send_byte@data data `uc  1 p 1 10 ]
+[v lcd_send_byte@rs rs `uc  1 p 1 12 ]
+"105
 } 1
-"96
+"93
 [v _lcd_send_nibble lcd_send_nibble `(v  1 s 1 lcd_send_nibble ]
 {
 [v lcd_send_nibble@nibble nibble `uc  1 p 1 wreg ]
+"94
+[v lcd_send_nibble@tmp tmp `uc  1 a 1 9 ]
+"93
 [v lcd_send_nibble@nibble nibble `uc  1 p 1 wreg ]
-[v lcd_send_nibble@nibble nibble `uc  1 p 1 13 ]
-"99
+[v lcd_send_nibble@nibble nibble `uc  1 p 1 8 ]
+"97
 } 1
-"89
+"86
 [v _lcd_pulse_enable lcd_pulse_enable `(v  1 s 1 lcd_pulse_enable ]
 {
-"94
+"91
 } 0
-"167
+"169
 [v _kb_scan kb_scan `(uc  1 s 1 kb_scan ]
 {
-"173
-[v kb_scan@cols cols `uc  1 a 1 12 ]
-"168
-[v kb_scan@col col `uc  1 a 1 14 ]
-[v kb_scan@row row `uc  1 a 1 13 ]
-"183
+"175
+[v kb_scan@cols cols `uc  1 a 1 7 ]
+"170
+[v kb_scan@col col `uc  1 a 1 9 ]
+[v kb_scan@row row `uc  1 a 1 8 ]
+"185
 } 0
-"187
+"189
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 s 1 I2C_Slave_Init ]
 {
 "208
@@ -447,22 +442,9 @@
 "212
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
+"252
+[v ISR@k k `uc  1 a 1 5 ]
 "234
-[v ISR@data data `uc  1 a 1 10 ]
-"285
-} 0
-"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-[v i1_memcpy memcpy `(*.4v  1 e 1 0 ]
-{
-"8
-[v i1memcpy@s s `*.4DCuc  1 a 1 6 ]
-"7
-[v i1memcpy@d d `*.4uc  1 a 1 5 ]
-"9
-[v i1memcpy@tmp tmp `uc  1 a 1 4 ]
-"4
-[v i1memcpy@d1 d1 `*.4v  1 p 1 0 ]
-[v i1memcpy@s1 s1 `*.4DCv  1 p 1 1 ]
-[v i1memcpy@n n `ui  1 p 2 2 ]
-"18
+[v ISR@data data `uc  1 a 1 4 ]
+"286
 } 0

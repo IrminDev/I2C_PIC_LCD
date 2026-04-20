@@ -1925,37 +1925,39 @@ static void I2C_Wait(void) {
 
 static void I2C_Start(void) {
     I2C_Wait();
+    PIR1bits.SSPIF = 0;
     SSPCON2bits.SEN = 1;
-    while (SSPCON2bits.SEN);
+    while(!PIR1bits.SSPIF);
 }
 
 static void I2C_Stop(void) {
     I2C_Wait();
+    PIR1bits.SSPIF = 0;
     SSPCON2bits.PEN = 1;
-    while (SSPCON2bits.PEN);
+    while(!PIR1bits.SSPIF);
 }
 
 static unsigned char I2C_Write(unsigned char data) {
-    I2C_Wait();
+    PIR1bits.SSPIF = 0;
     SSPBUF = data;
-    I2C_Wait();
-    while (SSPSTATbits.BF);
+    while(!PIR1bits.SSPIF);
     return SSPCON2bits.ACKSTAT;
 }
 
 static unsigned char I2C_Read(void) {
     I2C_Wait();
+    PIR1bits.SSPIF = 0;
     SSPCON2bits.RCEN = 1;
-    while (!SSPSTATbits.BF);
-    unsigned char data = SSPBUF;
-    return data;
+    while(!PIR1bits.SSPIF);
+    return SSPBUF;
 }
 
 static void I2C_Ack(void) {
     I2C_Wait();
     SSPCON2bits.ACKDT = 0;
+    PIR1bits.SSPIF = 0;
     SSPCON2bits.ACKEN = 1;
-    while (SSPCON2bits.ACKEN);
+    while(!PIR1bits.SSPIF);
 }
 
 static void I2C_Nack(void) {
@@ -2004,13 +2006,18 @@ static uint8_t I2C_PollMessage(char *buf, uint8_t maxLen) {
 
     for (uint8_t i = 0; i < len; i++) {
         buf[i] = (char)I2C_Read();
+        if (buf[i] == (char)0xFF) {
+            I2C_Nack();
+            I2C_Stop();
+            buf[i] = '\0';
+            return i;
+        }
         if (i < len - 1)
             I2C_Ack();
         else
             I2C_Nack();
     }
     buf[len] = '\0';
-
     I2C_Stop();
     return len;
 }

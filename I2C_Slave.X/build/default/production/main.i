@@ -1789,14 +1789,13 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 28 "main.c" 2
-# 54 "main.c"
+# 53 "main.c"
 static const char *keyChars[16] = {
     "1.,!?", "ABC2", "DEF3", ((void*)0),
     "GHI4", "JKL5", "MNO6", ((void*)0),
     "PQRS7", "TUV8", "WXYZ9", ((void*)0),
     ((void*)0), " 0", ((void*)0), ((void*)0)
 };
-
 
 static char sendBuf[13 + 1];
 static char recvBuf[13 + 1];
@@ -1812,7 +1811,7 @@ static uint16_t tapTimer;
 static volatile char txBuf[13 + 1];
 static volatile uint8_t txLen;
 static volatile uint8_t txIdx;
-static volatile uint8_t txSentLen;
+static volatile uint8_t txConsumed;
 
 
 static volatile char rxTmp[13 + 1];
@@ -1820,20 +1819,20 @@ static volatile uint8_t rxExpected;
 static volatile uint8_t rxIdx;
 static volatile uint8_t rxState;
 
-
 static volatile uint8_t newMsgFlag;
 
 
 
 static void lcd_pulse_enable(void) {
     PORTAbits.RA1 = 1;
-    _delay((unsigned long)((2)*(4000000UL/4000000.0)));
+    _delay((unsigned long)((4)*(4000000UL/4000000.0)));
     PORTAbits.RA1 = 0;
     _delay((unsigned long)((100)*(4000000UL/4000000.0)));
 }
 
 static void lcd_send_nibble(uint8_t nibble) {
-    PORTA = (PORTA & 0x03) | ((nibble & 0x0F) << 2);
+    uint8_t tmp = PORTA & 0x03;
+    PORTA = tmp | ((nibble & 0x0F) << 2);
     lcd_pulse_enable();
 }
 
@@ -1842,33 +1841,37 @@ static void lcd_send_byte(uint8_t rs, uint8_t data) {
     _delay((unsigned long)((5)*(4000000UL/4000000.0)));
     lcd_send_nibble(data >> 4);
     lcd_send_nibble(data & 0x0F);
-    _delay((unsigned long)((100)*(4000000UL/4000000.0)));
+    _delay((unsigned long)((120)*(4000000UL/4000000.0)));
 }
 
 static void lcd_cmd(uint8_t cmd) {
     lcd_send_byte(0, cmd);
-    if (cmd <= 0x03) _delay((unsigned long)((2)*(4000000UL/4000.0)));
+    if (cmd <= 0x03) _delay((unsigned long)((3)*(4000000UL/4000.0)));
 }
 
 static void lcd_char(char c) {
     lcd_send_byte(1, (uint8_t)c);
 }
 
+static void lcd_print(const char *str) {
+    while (*str) lcd_char(*str++);
+}
+
 static void lcd_init(void) {
     PORTA = 0x00;
-    _delay((unsigned long)((30)*(4000000UL/4000.0)));
+    _delay((unsigned long)((40)*(4000000UL/4000.0)));
 
     PORTAbits.RA0 = 0;
     lcd_send_nibble(0x03); _delay((unsigned long)((5)*(4000000UL/4000.0)));
     lcd_send_nibble(0x03); _delay((unsigned long)((1)*(4000000UL/4000.0)));
     lcd_send_nibble(0x03); _delay((unsigned long)((1)*(4000000UL/4000.0)));
-    lcd_send_nibble(0x02); _delay((unsigned long)((1)*(4000000UL/4000.0)));
+    lcd_send_nibble(0x02); _delay((unsigned long)((2)*(4000000UL/4000.0)));
 
     lcd_cmd(0x28);
     lcd_cmd(0x0C);
     lcd_cmd(0x06);
     lcd_cmd(0x01);
-    _delay((unsigned long)((2)*(4000000UL/4000.0)));
+    _delay((unsigned long)((3)*(4000000UL/4000.0)));
 }
 
 static void lcd_set_cursor(uint8_t col, uint8_t row) {
@@ -1885,7 +1888,7 @@ static void lcd_refresh(void) {
 
     lcd_set_cursor(0, 1);
     lcd_char('R'); lcd_char(':'); lcd_char(' ');
-    uint8_t rLen = (uint8_t)strlen((const char*)recvBuf);
+    uint8_t rLen = (uint8_t)strlen((const char *)recvBuf);
     for (i = 0; i < 13; i++)
         lcd_char((i < rLen) ? recvBuf[i] : ' ');
 
@@ -1928,17 +1931,15 @@ static void I2C_Slave_Init(void) {
     TRISCbits.TRISC4 = 1;
     SSPADD = 0x10 << 1;
     SSPSTAT = 0x80;
-    SSPCON = 0x26;
-    SSPCON2 = 0x00;
-
+    SSPCON = 0x36;
+    SSPCON2 = 0x01;
 
     rxState = 0;
     rxIdx = 0;
     rxExpected = 0;
     txLen = 0;
     txIdx = 0;
-    txSentLen = 0;
-
+    txConsumed = 0;
 
     PIR1bits.SSPIF = 0;
     PIE1bits.SSPIE = 1;
@@ -1951,7 +1952,7 @@ static void I2C_Slave_Init(void) {
 void __attribute__((picinterrupt(("")))) ISR(void) {
     if (!PIR1bits.SSPIF) return;
 
-    uint8_t dummy;
+    unsigned char dummy;
 
 
     if (SSPCONbits.SSPOV) {
@@ -1960,8 +1961,8 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
     }
 
 
-
     if (!SSPSTATbits.R_nW) {
+
         if (!SSPSTATbits.D_nA) {
 
             dummy = SSPBUF;
@@ -1970,55 +1971,56 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
             rxExpected = 0;
         } else {
 
-            uint8_t data = SSPBUF;
+            unsigned char data = SSPBUF;
 
             if (rxState == 0) {
 
                 rxExpected = data;
-                if (rxExpected > 13) rxExpected = 13;
+                if (rxExpected > 13)
+                    rxExpected = 13;
                 rxIdx = 0;
-                rxState = 1;
+                if (rxExpected > 0)
+                    rxState = 1;
             } else {
 
-                if (rxIdx < rxExpected) {
+                if (rxIdx < rxExpected)
                     rxTmp[rxIdx++] = (char)data;
-                }
+
                 if (rxIdx >= rxExpected) {
 
                     rxTmp[rxIdx] = '\0';
-                    memcpy((void*)recvBuf, (const void*)rxTmp, rxIdx + 1);
+                    for (uint8_t k = 0; k <= rxIdx; k++)
+                        recvBuf[k] = rxTmp[k];
                     newMsgFlag = 1;
                     rxState = 0;
                 }
             }
         }
-        SSPCONbits.CKP = 1;
+    }
 
 
+    else {
 
-    } else {
         if (!SSPSTATbits.D_nA) {
 
             dummy = SSPBUF;
             txIdx = 0;
-            txSentLen = 0;
-
             SSPBUF = txLen;
-            txSentLen = 1;
         } else {
 
             if (txLen > 0 && txIdx < txLen) {
                 SSPBUF = (unsigned char)txBuf[txIdx++];
 
-                if (txIdx >= txLen) {
-                    txLen = 0;
-                }
+                if (txIdx >= txLen)
+                    txConsumed = 1;
             } else {
                 SSPBUF = 0x00;
             }
         }
-        SSPCONbits.CKP = 1;
     }
+
+
+    SSPCONbits.CKP = 1;
 
     PIR1bits.SSPIF = 0;
 }
@@ -2100,14 +2102,18 @@ static void process_key(uint8_t key) {
         multitap_commit();
         if (sendLen > 0) {
 
-            PIE1bits.SSPIE = 0;
-            memcpy((void*)txBuf, sendBuf, sendLen + 1);
+            INTCONbits.GIE = 0;
+            for (uint8_t k = 0; k <= sendLen; k++)
+                txBuf[k] = sendBuf[k];
             txLen = sendLen;
             txIdx = 0;
-            PIE1bits.SSPIE = 1;
+            txConsumed = 0;
+            INTCONbits.GIE = 1;
 
             text_clear_send();
-            buzzer_beep(150);
+            buzzer_beep(100);
+            _delay((unsigned long)((50)*(4000000UL/4000.0)));
+            buzzer_beep(100);
         }
         lcd_refresh();
         return;
@@ -2118,7 +2124,6 @@ static void process_key(uint8_t key) {
         lcd_refresh();
         return;
     }
-
 
     const char *chars = keyChars[key];
     if (chars == ((void*)0)) return;
@@ -2141,7 +2146,6 @@ static void process_key(uint8_t key) {
 
 
 void main(void) {
-
     ADCON1 = 0x07;
 
     TRISA = 0x00;
@@ -2155,8 +2159,9 @@ void main(void) {
     I2C_Slave_Init();
 
     memset(sendBuf, 0, sizeof(sendBuf));
-    memset((void*)recvBuf, 0, sizeof(recvBuf));
-    memset((void*)txBuf, 0, sizeof(txBuf));
+    memset((void *)recvBuf, 0, sizeof(recvBuf));
+    memset((void *)txBuf, 0, sizeof(txBuf));
+    memset((void *)rxTmp, 0, sizeof(rxTmp));
     cursorPos = 0;
     sendLen = 0;
     uppercase = 1;
@@ -2164,22 +2169,37 @@ void main(void) {
     tapIndex = 0;
     tapTimer = 0;
     newMsgFlag = 0;
+    txConsumed = 0;
 
+    lcd_refresh();
+
+    lcd_set_cursor(0, 1);
+    lcd_print("R: READY        ");
+    _delay((unsigned long)((1000)*(4000000UL/4000.0)));
     lcd_refresh();
 
     uint8_t prevKey = 0xFF;
 
     while (1) {
 
+        if (txConsumed) {
+            INTCONbits.GIE = 0;
+            txLen = 0;
+            txConsumed = 0;
+            INTCONbits.GIE = 1;
+        }
+
+
         if (newMsgFlag) {
             newMsgFlag = 0;
-            buzzer_beep(120);
+            buzzer_beep(80);
+            _delay((unsigned long)((30)*(4000000UL/4000.0)));
+            buzzer_beep(80);
             lcd_refresh();
         }
 
 
         uint8_t key = kb_scan();
-
         if (key != 0xFF && key != prevKey) {
             _delay((unsigned long)((50)*(4000000UL/4000.0)));
             if (kb_scan() == key) {

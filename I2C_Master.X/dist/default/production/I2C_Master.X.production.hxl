@@ -1,24 +1,24 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\irmin\AppData\Local\Temp\xcAsx74.0\driver_tmp_3.o
+ C:\Users\irmin\AppData\Local\Temp\xcAsspw.0\driver_tmp_3.o
  -Odist/default/production\I2C_Master.X.production.hex
  -logfile=dist/default/production\I2C_Master.X.production.hxl
  -addressing=2
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 89h		(C:\Users\irmin\AppData\Local\Temp\xcAsx74.0\driver_tmp_3.o)
-  2C4h - FFFh		(C:\Users\irmin\AppData\Local\Temp\xcAsx74.0\driver_tmp_3.o)
-  400Eh - 400Fh		(C:\Users\irmin\AppData\Local\Temp\xcAsx74.0\driver_tmp_3.o)
+  0h - 89h		(C:\Users\irmin\AppData\Local\Temp\xcAsspw.0\driver_tmp_3.o)
+  280h - FFFh		(C:\Users\irmin\AppData\Local\Temp\xcAsspw.0\driver_tmp_3.o)
+  400Eh - 400Fh		(C:\Users\irmin\AppData\Local\Temp\xcAsspw.0\driver_tmp_3.o)
  Unused ranges:
-  8Ah - 2C3h
+  8Ah - 27Fh
   1000h - 400Dh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\irmin\AppData\Local\Temp\xcAsx74.0\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\irmin\AppData\Local\Temp\xcAsspw.0\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -32,7 +32,11 @@
 00000070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000080 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
 ----------------------------------------------------------
-000002C0 | -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000280 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000290 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000002A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000002B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000002C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000002D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000002E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000002F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

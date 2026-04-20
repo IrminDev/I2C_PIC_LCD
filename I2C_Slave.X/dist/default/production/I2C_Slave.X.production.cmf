@@ -11,46 +11,45 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-reset_vec CODE 0 0 0 2 2 1
-end_init CODE 0 F F 2 2 1
-config CONFIG 4 2007 2007 1 2 1
 $dist/default/production\I2C_Slave.X.production.o
-cinit CODE 0 11 11 1B 2 1
-text1 CODE 0 2C 2C F4 2 1
-text2 CODE 0 667 667 10 2 1
-text3 CODE 0 4A3 4A3 33 2 1
-text4 CODE 0 465 465 3E 2 1
-text5 CODE 0 633 633 13 2 1
-text6 CODE 0 604 604 1B 2 1
-text7 CODE 0 698 698 8 2 1
-text8 CODE 0 526 526 23 2 1
-text9 CODE 0 27B 27B 89 2 1
-text10 CODE 0 56C 56C 22 2 1
-text11 CODE 0 5E8 5E8 1C 2 1
-text12 CODE 0 686 686 A 2 1
-text13 CODE 0 58E 58E 1F 2 1
-text14 CODE 0 4D6 4D6 28 2 1
-text15 CODE 0 3C9 3C9 59 2 1
-text16 CODE 0 304 304 63 2 1
-text17 CODE 0 5CB 5CB 1D 2 1
-text18 CODE 0 4FE 4FE 28 2 1
-text19 CODE 0 61F 61F 14 2 1
-text20 CODE 0 677 677 F 2 1
-text21 CODE 0 367 367 62 2 1
-text22 CODE 0 5AD 5AD 1E 2 1
-text23 CODE 0 1E3 1E3 98 2 1
-text24 CODE 0 549 549 23 2 1
-maintext CODE 0 120 120 C3 2 1
-cstackBANK0 BANK0 1 4A 4A 29 1 1
-inittext CODE 0 646 646 11 2 1
-intentry CODE 0 4 4 B 2 1
+cinit CODE 0 13 13 1B 2 1
+text1 CODE 0 13E 13E 107 2 1
+text2 CODE 0 6BA 6BA 10 2 1
+text3 CODE 0 51E 51E 33 2 1
+text4 CODE 0 4E0 4E0 3E 2 1
+text5 CODE 0 686 686 13 2 1
+text6 CODE 0 639 639 1B 2 1
+text7 CODE 0 6EC 6EC 8 2 1
+text8 CODE 0 2E4 2E4 89 2 1
+text9 CODE 0 5A1 5A1 22 2 1
+text10 CODE 0 601 601 1C 2 1
+text11 CODE 0 5C3 5C3 1F 2 1
+text12 CODE 0 551 551 28 2 1
+text13 CODE 0 433 433 59 2 1
+text14 CODE 0 654 654 1A 2 1
+text15 CODE 0 6DA 6DA A 2 1
+text16 CODE 0 36D 36D 64 2 1
+text17 CODE 0 61D 61D 1C 2 1
+text18 CODE 0 579 579 28 2 1
+text19 CODE 0 66E 66E 18 2 1
+text20 CODE 0 6CA 6CA 10 2 1
+text21 CODE 0 3D1 3D1 62 2 1
+text22 CODE 0 5E2 5E2 1F 2 1
+text23 CODE 0 245 245 9F 2 1
+maintext CODE 0 2E 2E 110 2 1
+cstackBANK0 BANK0 1 4A 4A 27 1 1
+inittext CODE 0 699 699 11 2 1
+intentry CODE 0 4 4 D 2 1
 bssBANK0 BANK0 1 20 20 2A 1 1
 bssBANK1 BANK1 1 A0 A0 1C 1 1
-idataBANK1 CODE 0 657 657 10 2 1
-strings STRING 0 422 422 43 2 1
+idataBANK1 CODE 0 6AA 6AA 10 2 1
+strings STRING 0 48C 48C 54 2 1
 dataBANK1 BANK1 1 BC BC 10 1 1
-clrtext CODE 0 690 690 8 2 1
+clrtext CODE 0 6E4 6E4 8 2 1
+config CONFIG 4 2007 2007 1 2 1
+$C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+reset_vec CODE 0 0 0 2 2 1
+end_init CODE 0 11 11 2 2 1
 config CONFIG 4 2007 2007 1 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -58,26 +57,26 @@ config CONFIG 4 2007 2007 1 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 73-7D 1
+RAM 71-7D 1
 RAM CC-FD 1
-BANK0 73-7D 1
+BANK0 71-7D 1
 BANK1 CC-FD 1
 CONST 2-3 2
-CONST 6A0-FFF 2
+CONST 6F4-FFF 2
 ENTRY 2-3 2
-ENTRY 6A0-FFF 2
+ENTRY 6F4-FFF 2
 IDLOC 2000-2003 2
 CODE 2-3 2
-CODE 6A0-FFF 2
+CODE 6F4-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-17D 1
 SFR3 180-1FD 1
 EEDATA 2100-217F 2
 STRCODE 2-3 2
-STRCODE 6A0-FFF 2
+STRCODE 6F4-FFF 2
 STRING 2-3 2
-STRING 6A0-FFF 2
+STRING 6F4-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -92,422 +91,422 @@ STRING 6A0-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\I2C_Slave.X.production.o
-11 cinit CODE >558:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-11 cinit CODE >561:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-11 cinit CODE >659:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-12 cinit CODE >660:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-13 cinit CODE >661:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-14 cinit CODE >662:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-15 cinit CODE >663:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-16 cinit CODE >664:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-17 cinit CODE >665:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-18 cinit CODE >666:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-19 cinit CODE >667:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-1A cinit CODE >668:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-1D cinit CODE >687:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-1E cinit CODE >688:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-1F cinit CODE >689:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-20 cinit CODE >690:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-23 cinit CODE >693:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-24 cinit CODE >694:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-25 cinit CODE >695:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-26 cinit CODE >696:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-29 cinit CODE >702:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-29 cinit CODE >704:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-2A cinit CODE >705:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-4 intentry CODE >212:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-549 text24 CODE >4:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-549 text24 CODE >11:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-54D text24 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-54F text24 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-550 text24 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-557 text24 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-55D text24 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-55D text24 CODE >16:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-560 text24 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-564 text24 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-56B text24 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-1E3 text23 CODE >212:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1E3 text23 CODE >213:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1E8 text23 CODE >218:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1EC text23 CODE >219:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1ED text23 CODE >220:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1EE text23 CODE >225:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1F4 text23 CODE >226:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1F8 text23 CODE >228:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1FB text23 CODE >229:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1FC text23 CODE >230:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1FD text23 CODE >231:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1FE text23 CODE >232:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1FF text23 CODE >234:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-203 text23 CODE >236:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-208 text23 CODE >238:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-20A text23 CODE >239:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-20C text23 CODE >239:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-212 text23 CODE >240:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-213 text23 CODE >241:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-215 text23 CODE >242:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-216 text23 CODE >244:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-218 text23 CODE >244:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-21C text23 CODE >245:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-224 text23 CODE >247:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-226 text23 CODE >247:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-22A text23 CODE >249:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-22F text23 CODE >250:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-237 text23 CODE >250:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-23D text23 CODE >251:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-241 text23 CODE >252:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-242 text23 CODE >256:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-243 text23 CODE >260:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-244 text23 CODE >261:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-248 text23 CODE >263:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-24B text23 CODE >264:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-24C text23 CODE >265:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-24D text23 CODE >267:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-24F text23 CODE >268:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-251 text23 CODE >269:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-252 text23 CODE >271:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-25B text23 CODE >271:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-25F text23 CODE >272:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-267 text23 CODE >274:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-269 text23 CODE >274:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-26D text23 CODE >275:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-26F text23 CODE >278:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-270 text23 CODE >281:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-271 text23 CODE >284:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-272 text23 CODE >285:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5AD text22 CODE >187:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5AD text22 CODE >188:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5B0 text22 CODE >189:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5B1 text22 CODE >190:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5B3 text22 CODE >191:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5B5 text22 CODE >192:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5B9 text22 CODE >193:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5BC text22 CODE >196:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5BF text22 CODE >197:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5C0 text22 CODE >198:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5C1 text22 CODE >199:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5C2 text22 CODE >200:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5C3 text22 CODE >201:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5C4 text22 CODE >204:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5C5 text22 CODE >205:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5C8 text22 CODE >206:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5C9 text22 CODE >207:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5CA text22 CODE >208:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-367 text21 CODE >167:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-367 text21 CODE >169:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-36C text21 CODE >169:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-371 text21 CODE >170:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-375 text21 CODE >171:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-37B text21 CODE >171:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-37E text21 CODE >171:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-384 text21 CODE >172:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-38B text21 CODE >173:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-390 text21 CODE >173:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-393 text21 CODE >173:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-399 text21 CODE >174:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-39F text21 CODE >175:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3A0 text21 CODE >176:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3A4 text21 CODE >176:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3A7 text21 CODE >176:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3AF text21 CODE >177:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3B2 text21 CODE >177:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3B5 text21 CODE >177:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3BA text21 CODE >178:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3BE text21 CODE >178:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3C2 text21 CODE >180:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3C5 text21 CODE >181:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3C7 text21 CODE >182:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3C8 text21 CODE >183:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-677 text20 CODE >89:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-677 text20 CODE >90:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-67A text20 CODE >91:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-67B text20 CODE >92:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-67E text20 CODE >93:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-685 text20 CODE >94:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-61F text19 CODE >96:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-622 text19 CODE >97:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-626 text19 CODE >97:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-629 text19 CODE >97:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-62F text19 CODE >98:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-632 text19 CODE >99:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4FE text18 CODE >101:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-501 text18 CODE >102:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-502 text18 CODE >102:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-504 text18 CODE >102:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-506 text18 CODE >103:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-509 text18 CODE >104:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-50E text18 CODE >104:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-511 text18 CODE >104:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-517 text18 CODE >105:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-51E text18 CODE >106:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-525 text18 CODE >107:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5CB text17 CODE >109:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5CE text17 CODE >110:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5D4 text17 CODE >111:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5D8 text17 CODE >111:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5E7 text17 CODE >112:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-304 text16 CODE >118:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-304 text16 CODE >119:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-307 text16 CODE >120:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-312 text16 CODE >122:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-315 text16 CODE >123:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-324 text16 CODE >124:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-331 text16 CODE >125:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-33E text16 CODE >126:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-34B text16 CODE >128:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-34F text16 CODE >129:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-353 text16 CODE >130:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-357 text16 CODE >131:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-35B text16 CODE >132:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-366 text16 CODE >133:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-3C9 text15 CODE >5:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3C9 text15 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3CC text15 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3D0 text15 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3D3 text15 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3D5 text15 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3D7 text15 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3DB text15 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3DE text15 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3E0 text15 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3E6 text15 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3E8 text15 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3E9 text15 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3EA text15 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3EE text15 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3F0 text15 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3F2 text15 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3F6 text15 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3F8 text15 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-3FC text15 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-400 text15 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-403 text15 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-406 text15 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-407 text15 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-40B text15 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-40D text15 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-413 text15 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-418 text15 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-41B text15 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-41D text15 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-421 text15 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-4D6 text14 CODE >325:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4D9 text14 CODE >326:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4DB text14 CODE >326:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4E1 text14 CODE >326:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4E5 text14 CODE >327:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4FC text14 CODE >328:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4FD text14 CODE >329:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-58E text13 CODE >159:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-58E text13 CODE >160:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-591 text13 CODE >161:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5A0 text13 CODE >161:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5A4 text13 CODE >161:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5AB text13 CODE >162:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5AC text13 CODE >163:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-686 text12 CODE >114:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-689 text12 CODE >115:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-68F text12 CODE >116:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5E8 text11 CODE >135:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5EB text11 CODE >136:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5F4 text11 CODE >136:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5FC text11 CODE >136:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-603 text11 CODE >137:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-56C text10 CODE >5:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-56C text10 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-572 text10 CODE >8:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-573 text10 CODE >9:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-575 text10 CODE >9:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-579 text10 CODE >8:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-581 text10 CODE >8:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-585 text10 CODE >11:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-589 text10 CODE >11:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-58D text10 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
-27B text9 CODE >139:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-27B text9 CODE >142:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-282 text9 CODE >143:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-28E text9 CODE >144:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-291 text9 CODE >145:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-293 text9 CODE >145:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2B1 text9 CODE >145:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2B5 text9 CODE >147:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2BB text9 CODE >148:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2C7 text9 CODE >149:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2D4 text9 CODE >150:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2D5 text9 CODE >151:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2D7 text9 CODE >151:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2F5 text9 CODE >151:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2F9 text9 CODE >153:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2FF text9 CODE >154:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-303 text9 CODE >155:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-526 text8 CODE >4:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-526 text8 CODE >11:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-52A text8 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-52C text8 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-52D text8 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-534 text8 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-53A text8 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-53A text8 CODE >16:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-53D text8 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-541 text8 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-548 text8 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memcpy.c
-698 text7 CODE >319:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-698 text7 CODE >320:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-69C text7 CODE >321:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-69D text7 CODE >322:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-69F text7 CODE >323:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-604 text6 CODE >3:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
-604 text6 CODE >5:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
-608 text6 CODE >6:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
-609 text6 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
-610 text6 CODE >6:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
-613 text6 CODE >6:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
-617 text6 CODE >6:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
-61E text6 CODE >10:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
-633 text5 CODE >313:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-633 text5 CODE >314:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-641 text5 CODE >315:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-644 text5 CODE >316:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-645 text5 CODE >317:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-465 text4 CODE >304:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-465 text4 CODE >305:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-472 text4 CODE >306:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-476 text4 CODE >307:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-489 text4 CODE >307:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-48F text4 CODE >307:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-493 text4 CODE >307:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-497 text4 CODE >308:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-49B text4 CODE >309:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-49D text4 CODE >310:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4A2 text4 CODE >311:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4A3 text3 CODE >289:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4A6 text3 CODE >290:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4A8 text3 CODE >290:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4AD text3 CODE >291:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4B0 text3 CODE >292:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4C3 text3 CODE >292:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4C7 text3 CODE >293:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4CD text3 CODE >294:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4CF text3 CODE >295:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4D1 text3 CODE >296:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4D5 text3 CODE >297:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-667 text2 CODE >299:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-66A text2 CODE >300:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-670 text2 CODE >301:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-676 text2 CODE >302:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2C text1 CODE >333:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-2F text1 CODE >334:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-35 text1 CODE >335:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-38 text1 CODE >336:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-41 text1 CODE >337:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-45 text1 CODE >340:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4B text1 CODE >341:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-4E text1 CODE >342:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-52 text1 CODE >342:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-59 text1 CODE >346:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-5F text1 CODE >347:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-62 text1 CODE >348:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-66 text1 CODE >352:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-6C text1 CODE >353:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-6F text1 CODE >354:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-7A text1 CODE >360:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-80 text1 CODE >361:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-83 text1 CODE >362:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-8A text1 CODE >364:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-8D text1 CODE >365:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-97 text1 CODE >365:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-9D text1 CODE >366:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-A1 text1 CODE >367:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-A2 text1 CODE >368:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-A5 text1 CODE >370:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-A8 text1 CODE >371:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-B2 text1 CODE >377:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-B8 text1 CODE >378:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-BC text1 CODE >384:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-C2 text1 CODE >385:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-C8 text1 CODE >386:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-D5 text1 CODE >388:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-D7 text1 CODE >388:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-E1 text1 CODE >389:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-EC text1 CODE >389:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-F6 text1 CODE >390:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-102 text1 CODE >391:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-108 text1 CODE >392:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-109 text1 CODE >393:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-10C text1 CODE >394:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-10F text1 CODE >395:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-11A text1 CODE >396:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-11F text1 CODE >400:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-120 maintext CODE >404:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-120 maintext CODE >406:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-124 maintext CODE >408:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-125 maintext CODE >409:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-127 maintext CODE >410:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-129 maintext CODE >411:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-12C maintext CODE >412:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-12E maintext CODE >413:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-12F maintext CODE >415:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-132 maintext CODE >416:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-135 maintext CODE >418:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-143 maintext CODE >419:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-151 maintext CODE >420:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-15F maintext CODE >421:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-162 maintext CODE >422:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-163 maintext CODE >423:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-165 maintext CODE >424:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-167 maintext CODE >425:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-168 maintext CODE >426:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-16A maintext CODE >427:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-16B maintext CODE >429:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-16E maintext CODE >431:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-172 maintext CODE >435:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-179 maintext CODE >436:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-17A maintext CODE >437:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-181 maintext CODE >438:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-184 maintext CODE >442:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-18A maintext CODE >444:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-191 maintext CODE >444:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-195 maintext CODE >445:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-19F maintext CODE >446:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1A5 maintext CODE >446:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1A9 maintext CODE >447:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1B0 maintext CODE >448:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1B6 maintext CODE >449:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1BB maintext CODE >451:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1C0 maintext CODE >452:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1C2 maintext CODE >456:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1C8 maintext CODE >457:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1CB maintext CODE >457:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1CE maintext CODE >458:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-1D7 maintext CODE >461:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
-690 clrtext CODE >674:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-690 clrtext CODE >675:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-691 clrtext CODE >676:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-691 clrtext CODE >677:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-692 clrtext CODE >678:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-693 clrtext CODE >679:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-694 clrtext CODE >680:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-695 clrtext CODE >681:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-696 clrtext CODE >682:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-697 clrtext CODE >683:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-646 inittext CODE >633:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-646 inittext CODE >634:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-647 inittext CODE >635:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-648 inittext CODE >636:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-649 inittext CODE >637:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-64A inittext CODE >644:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-64A inittext CODE >645:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-64D inittext CODE >646:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-64E inittext CODE >647:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-64F inittext CODE >648:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-650 inittext CODE >649:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-651 inittext CODE >650:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-652 inittext CODE >651:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-653 inittext CODE >652:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-654 inittext CODE >653:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-655 inittext CODE >654:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
-656 inittext CODE >655:C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_1.s
+13 cinit CODE >579:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+13 cinit CODE >582:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+13 cinit CODE >680:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+14 cinit CODE >681:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+15 cinit CODE >682:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+16 cinit CODE >683:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+17 cinit CODE >684:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+18 cinit CODE >685:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+19 cinit CODE >686:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+1A cinit CODE >687:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+1B cinit CODE >688:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+1C cinit CODE >689:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+1F cinit CODE >708:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+20 cinit CODE >709:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+21 cinit CODE >710:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+22 cinit CODE >711:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+25 cinit CODE >714:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+26 cinit CODE >715:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+27 cinit CODE >716:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+28 cinit CODE >717:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+2B cinit CODE >723:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+2B cinit CODE >725:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+2C cinit CODE >726:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+4 intentry CODE >212:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+245 text23 CODE >212:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+245 text23 CODE >213:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+24A text23 CODE >218:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+24E text23 CODE >219:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+24F text23 CODE >220:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+250 text23 CODE >224:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+256 text23 CODE >226:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+25A text23 CODE >228:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+25D text23 CODE >229:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+25E text23 CODE >230:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+25F text23 CODE >231:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+260 text23 CODE >232:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+261 text23 CODE >234:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+265 text23 CODE >236:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+26A text23 CODE >238:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+26C text23 CODE >239:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+26E text23 CODE >239:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+272 text23 CODE >240:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+274 text23 CODE >241:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+275 text23 CODE >242:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+27A text23 CODE >243:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+27D text23 CODE >246:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+27F text23 CODE >246:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+283 text23 CODE >247:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+28B text23 CODE >249:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+28D text23 CODE >249:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+291 text23 CODE >251:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+296 text23 CODE >252:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+298 text23 CODE >253:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2A6 text23 CODE >253:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2AA text23 CODE >254:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2AC text23 CODE >255:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2AE text23 CODE >262:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2AE text23 CODE >264:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2B2 text23 CODE >266:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2B5 text23 CODE >267:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2B6 text23 CODE >268:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2B8 text23 CODE >269:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2B9 text23 CODE >271:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2C2 text23 CODE >271:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2C6 text23 CODE >272:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2CE text23 CODE >274:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2D0 text23 CODE >274:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2D4 text23 CODE >275:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2D7 text23 CODE >277:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2D8 text23 CODE >283:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2D9 text23 CODE >285:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2DA text23 CODE >286:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5E2 text22 CODE >189:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5E2 text22 CODE >190:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5E5 text22 CODE >191:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5E6 text22 CODE >192:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5E8 text22 CODE >193:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5EA text22 CODE >194:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5EE text22 CODE >195:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5F2 text22 CODE >197:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5F5 text22 CODE >198:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5F6 text22 CODE >199:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5F7 text22 CODE >200:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5F8 text22 CODE >201:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5F9 text22 CODE >202:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5FA text22 CODE >204:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5FB text22 CODE >205:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5FE text22 CODE >206:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5FF text22 CODE >207:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+600 text22 CODE >208:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3D1 text21 CODE >169:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3D1 text21 CODE >171:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3D6 text21 CODE >171:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3DB text21 CODE >172:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3DF text21 CODE >173:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3E5 text21 CODE >173:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3E8 text21 CODE >173:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3EE text21 CODE >174:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3F5 text21 CODE >175:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3FA text21 CODE >175:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3FD text21 CODE >175:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+403 text21 CODE >176:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+409 text21 CODE >177:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+40A text21 CODE >178:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+40E text21 CODE >178:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+411 text21 CODE >178:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+419 text21 CODE >179:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+41C text21 CODE >179:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+41F text21 CODE >179:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+424 text21 CODE >180:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+428 text21 CODE >180:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+42C text21 CODE >182:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+42F text21 CODE >183:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+431 text21 CODE >184:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+432 text21 CODE >185:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6CA text20 CODE >86:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6CA text20 CODE >87:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6CD text20 CODE >88:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6CF text20 CODE >89:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6D2 text20 CODE >90:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6D9 text20 CODE >91:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+66E text19 CODE >93:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+671 text19 CODE >94:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+675 text19 CODE >95:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+679 text19 CODE >95:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+67C text19 CODE >95:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+67E text19 CODE >95:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+682 text19 CODE >96:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+685 text19 CODE >97:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+579 text18 CODE >99:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+57C text18 CODE >100:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+57D text18 CODE >100:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+57F text18 CODE >100:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+581 text18 CODE >101:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+584 text18 CODE >102:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+589 text18 CODE >102:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+58C text18 CODE >102:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+592 text18 CODE >103:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+599 text18 CODE >104:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5A0 text18 CODE >105:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+61D text17 CODE >107:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+620 text17 CODE >108:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+626 text17 CODE >109:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+62A text17 CODE >109:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+638 text17 CODE >110:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+36D text16 CODE >120:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+36D text16 CODE >121:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+370 text16 CODE >122:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+37B text16 CODE >124:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+37E text16 CODE >125:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+38D text16 CODE >126:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+39A text16 CODE >127:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3A7 text16 CODE >128:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3B6 text16 CODE >130:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3BA text16 CODE >131:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3BE text16 CODE >132:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3C2 text16 CODE >133:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3C6 text16 CODE >134:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3D0 text16 CODE >135:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6DA text15 CODE >112:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6DD text15 CODE >113:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6E3 text15 CODE >114:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+654 text14 CODE >116:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+654 text14 CODE >117:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+669 text14 CODE >117:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+66D text14 CODE >118:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+433 text13 CODE >5:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+433 text13 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+436 text13 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+43A text13 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+43D text13 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+43F text13 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+441 text13 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+445 text13 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+448 text13 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+44A text13 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+450 text13 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+452 text13 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+453 text13 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+454 text13 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+458 text13 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+45A text13 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+45C text13 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+460 text13 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+462 text13 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+466 text13 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+46A text13 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+46D text13 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+470 text13 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+471 text13 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+475 text13 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+477 text13 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+47D text13 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+482 text13 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+485 text13 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+487 text13 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+48B text13 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+551 text12 CODE >326:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+554 text12 CODE >327:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+556 text12 CODE >327:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+55C text12 CODE >327:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+560 text12 CODE >328:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+577 text12 CODE >329:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+578 text12 CODE >330:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5C3 text11 CODE >161:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5C3 text11 CODE >162:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5C6 text11 CODE >163:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5D5 text11 CODE >163:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5D9 text11 CODE >163:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5E0 text11 CODE >164:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5E1 text11 CODE >165:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+601 text10 CODE >137:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+604 text10 CODE >138:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+60D text10 CODE >138:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+615 text10 CODE >138:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+61C text10 CODE >139:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5A1 text9 CODE >5:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5A1 text9 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5A7 text9 CODE >8:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5A8 text9 CODE >9:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5AA text9 CODE >9:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5AE text9 CODE >8:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5B6 text9 CODE >8:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5BA text9 CODE >11:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5BE text9 CODE >11:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+5C2 text9 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\strlen.c
+2E4 text8 CODE >141:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2E4 text8 CODE >144:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2EB text8 CODE >145:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2F7 text8 CODE >146:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2FA text8 CODE >147:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2FC text8 CODE >147:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+31A text8 CODE >147:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+31E text8 CODE >149:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+324 text8 CODE >150:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+330 text8 CODE >151:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+33D text8 CODE >152:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+33E text8 CODE >153:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+340 text8 CODE >153:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+35E text8 CODE >153:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+362 text8 CODE >155:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+368 text8 CODE >156:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+36C text8 CODE >157:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6EC text7 CODE >320:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6EC text7 CODE >321:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6F0 text7 CODE >322:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6F1 text7 CODE >323:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6F3 text7 CODE >324:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+639 text6 CODE >3:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+639 text6 CODE >5:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+63D text6 CODE >6:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+63E text6 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+645 text6 CODE >6:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+648 text6 CODE >6:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+64C text6 CODE >6:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+653 text6 CODE >10:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\memset.c
+686 text5 CODE >314:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+686 text5 CODE >315:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+694 text5 CODE >316:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+697 text5 CODE >317:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+698 text5 CODE >318:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+4E0 text4 CODE >305:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+4E0 text4 CODE >306:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+4ED text4 CODE >307:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+4F1 text4 CODE >308:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+504 text4 CODE >308:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+50A text4 CODE >308:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+50E text4 CODE >308:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+512 text4 CODE >309:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+516 text4 CODE >310:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+518 text4 CODE >311:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+51D text4 CODE >312:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+51E text3 CODE >290:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+521 text3 CODE >291:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+523 text3 CODE >291:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+528 text3 CODE >292:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+52B text3 CODE >293:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+53E text3 CODE >293:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+542 text3 CODE >294:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+548 text3 CODE >295:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+54A text3 CODE >296:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+54C text3 CODE >297:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+550 text3 CODE >298:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6BA text2 CODE >300:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6BD text2 CODE >301:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6C3 text2 CODE >302:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6C9 text2 CODE >303:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+13E text1 CODE >334:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+141 text1 CODE >335:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+147 text1 CODE >336:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+14A text1 CODE >337:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+153 text1 CODE >338:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+157 text1 CODE >341:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+15D text1 CODE >342:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+160 text1 CODE >343:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+164 text1 CODE >343:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+16B text1 CODE >347:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+171 text1 CODE >348:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+174 text1 CODE >349:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+178 text1 CODE >353:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+17E text1 CODE >354:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+181 text1 CODE >355:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+18C text1 CODE >361:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+192 text1 CODE >362:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+195 text1 CODE >363:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+19C text1 CODE >365:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+19D text1 CODE >366:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+19F text1 CODE >367:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1AE text1 CODE >367:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1B2 text1 CODE >368:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1B4 text1 CODE >369:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1B5 text1 CODE >370:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1B6 text1 CODE >371:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1B7 text1 CODE >373:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1BA text1 CODE >374:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1C3 text1 CODE >375:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1CD text1 CODE >376:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1D7 text1 CODE >382:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1DD text1 CODE >383:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1E1 text1 CODE >388:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1E7 text1 CODE >389:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1ED text1 CODE >390:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1FA text1 CODE >392:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+1FC text1 CODE >392:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+206 text1 CODE >393:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+211 text1 CODE >393:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+21B text1 CODE >394:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+227 text1 CODE >395:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+22D text1 CODE >396:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+22E text1 CODE >397:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+231 text1 CODE >398:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+234 text1 CODE >399:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+23F text1 CODE >400:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+244 text1 CODE >404:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2E maintext CODE >408:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+2E maintext CODE >409:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+32 maintext CODE >411:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+33 maintext CODE >412:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+35 maintext CODE >413:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+37 maintext CODE >414:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3A maintext CODE >415:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3C maintext CODE >416:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+3D maintext CODE >418:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+40 maintext CODE >419:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+43 maintext CODE >421:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+51 maintext CODE >422:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+5F maintext CODE >423:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6D maintext CODE >424:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+7B maintext CODE >425:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+7E maintext CODE >426:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+7F maintext CODE >427:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+81 maintext CODE >428:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+83 maintext CODE >429:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+84 maintext CODE >430:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+86 maintext CODE >431:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+87 maintext CODE >432:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+88 maintext CODE >434:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+8B maintext CODE >436:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+93 maintext CODE >437:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+9A maintext CODE >438:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+A9 maintext CODE >439:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+AC maintext CODE >441:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+B0 maintext CODE >445:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+B7 maintext CODE >446:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+B8 maintext CODE >447:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+B9 maintext CODE >448:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+BA maintext CODE >449:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+BB maintext CODE >453:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+C0 maintext CODE >454:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+C1 maintext CODE >455:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+C8 maintext CODE >456:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+D3 maintext CODE >457:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+DC maintext CODE >458:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+DF maintext CODE >462:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+E5 maintext CODE >463:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+EC maintext CODE >463:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+F0 maintext CODE >464:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+FA maintext CODE >465:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+100 maintext CODE >465:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+104 maintext CODE >466:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+10B maintext CODE >467:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+111 maintext CODE >468:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+116 maintext CODE >470:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+11B maintext CODE >471:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+11D maintext CODE >475:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+123 maintext CODE >476:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+126 maintext CODE >476:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+129 maintext CODE >477:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+132 maintext CODE >480:C:\Users\irmin\MPLABXProjects\I2C_PIC_LCD\I2C_Slave.X\main.c
+6E4 clrtext CODE >695:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6E4 clrtext CODE >696:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6E5 clrtext CODE >697:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6E5 clrtext CODE >698:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6E6 clrtext CODE >699:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6E7 clrtext CODE >700:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6E8 clrtext CODE >701:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6E9 clrtext CODE >702:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6EA clrtext CODE >703:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6EB clrtext CODE >704:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+699 inittext CODE >654:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+699 inittext CODE >655:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+69A inittext CODE >656:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+69B inittext CODE >657:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+69C inittext CODE >658:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+69D inittext CODE >665:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+69D inittext CODE >666:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A0 inittext CODE >667:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A1 inittext CODE >668:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A2 inittext CODE >669:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A3 inittext CODE >670:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A4 inittext CODE >671:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A5 inittext CODE >672:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A6 inittext CODE >673:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A7 inittext CODE >674:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A8 inittext CODE >675:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
+6A9 inittext CODE >676:C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -521,101 +520,99 @@ F6 text1 CODE >390:C:\Users\irmin\MPLABXProjects\I2C_Slave.X\main.c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 1 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-__end_of_apply_case 9FC 0 CODE 0 text14 dist/default/production\I2C_Slave.X.production.o
+__end_of_apply_case AF2 0 CODE 0 text12 dist/default/production\I2C_Slave.X.production.o
 __LdataBANK1 0 0 ABS 0 dataBANK1 -
-__Hspace_0 6A0 0 ABS 0 - -
+__Hspace_0 6F4 0 ABS 0 - -
 __Hspace_1 CC 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 400F 0 ABS 0 - -
 __HidataBANK1 0 0 ABS 0 idataBANK1 -
-_text_replace_prev_char CCE 0 CODE 0 text2 dist/default/production\I2C_Slave.X.production.o
+_text_replace_prev_char D74 0 CODE 0 text2 dist/default/production\I2C_Slave.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-i1memcpy@tmp 4E 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ -
+ISR@k 4F 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-_main 240 0 CODE 0 maintext dist/default/production\I2C_Slave.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+_main 5C 0 CODE 0 maintext dist/default/production\I2C_Slave.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-___stack_lo 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-start 1E 0 CODE 0 init C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-_multitap_commit D30 0 CODE 0 text7 dist/default/production\I2C_Slave.X.production.o
-buzzer_beep@duration_ms 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+start 22 0 CODE 0 init C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+_multitap_commit DD8 0 CODE 0 text7 dist/default/production\I2C_Slave.X.production.o
+buzzer_beep@duration_ms 50 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_txConsumed 26 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
 _cursorPos 2D 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
-__end_of_text_delete 946 0 CODE 0 text4 dist/default/production\I2C_Slave.X.production.o
+__end_of_text_delete A3C 0 CODE 0 text4 dist/default/production\I2C_Slave.X.production.o
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
 __Hpowerup 0 0 CODE 0 powerup -
-___awmod@sign 5A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-__end_of_lcd_refresh 608 0 CODE 0 text9 dist/default/production\I2C_Slave.X.production.o
-_txSentLen 26 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
+___awmod@sign 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__end_of_lcd_print CDC 0 CODE 0 text14 dist/default/production\I2C_Slave.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+__end_of_lcd_refresh 6DA 0 CODE 0 text8 dist/default/production\I2C_Slave.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-i1memcpy@d 4F 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-i1memcpy@n 4C 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-i1memcpy@s 50 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-_text_insert_char 946 0 CODE 0 text3 dist/default/production\I2C_Slave.X.production.o
+_text_insert_char A3C 0 CODE 0 text3 dist/default/production\I2C_Slave.X.production.o
 _newMsgFlag 22 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
-__end_of_lcd_pulse_enable D0C 0 CODE 0 text20 dist/default/production\I2C_Slave.X.production.o
+__end_of_lcd_pulse_enable DB4 0 CODE 0 text20 dist/default/production\I2C_Slave.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-text_replace_prev_char@c 5A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_lcd_print CA8 0 CODE 0 text14 dist/default/production\I2C_Slave.X.production.o
+text_replace_prev_char@c 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 _ADCON1 9F 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-lcd_set_cursor@col 61 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-lcd_set_cursor@row 5E 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-__end_of_lcd_cmd BD0 0 CODE 0 text17 dist/default/production\I2C_Slave.X.production.o
+lcd_set_cursor@col 5D 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+lcd_set_cursor@row 5A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__end_of_lcd_cmd C72 0 CODE 0 text17 dist/default/production\I2C_Slave.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-main@key 72 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-kb_scan@cols 56 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-main@prevKey 71 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+lcd_print@str 58 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+main@key 70 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+kb_scan@cols 51 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+main@prevKey 6F 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-kb_scan@col 58 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-kb_scan@row 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-_kb_scan 6CE 0 CODE 0 text21 dist/default/production\I2C_Slave.X.production.o
-__end_of___awmod 844 0 CODE 0 text15 dist/default/production\I2C_Slave.X.production.o
-lcd_refresh@i 69 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-?_strlen 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-lcd_refresh@rLen 68 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-_lcd_refresh$361 64 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-_lcd_refresh$363 66 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-_I2C_Slave_Init B5A 0 CODE 0 text22 dist/default/production\I2C_Slave.X.production.o
-memcpy@tmp 59 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-apply_case@c 59 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-start_initialization 22 0 CODE 0 cinit dist/default/production\I2C_Slave.X.production.o
-__end_of_text_replace_prev_char CEE 0 CODE 0 text2 dist/default/production\I2C_Slave.X.production.o
-process_key@key 6E 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-process_key@len 6C 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-__end_of_text_insert_char 9AC 0 CODE 0 text3 dist/default/production\I2C_Slave.X.production.o
+kb_scan@col 53 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+kb_scan@row 52 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_kb_scan 7A2 0 CODE 0 text21 dist/default/production\I2C_Slave.X.production.o
+__end_of___awmod 918 0 CODE 0 text13 dist/default/production\I2C_Slave.X.production.o
+lcd_refresh@i 65 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+?_strlen 50 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+lcd_refresh@rLen 64 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_lcd_refresh$357 60 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_lcd_refresh$359 62 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_I2C_Slave_Init BC4 0 CODE 0 text22 dist/default/production\I2C_Slave.X.production.o
+apply_case@c 54 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+start_initialization 26 0 CODE 0 cinit dist/default/production\I2C_Slave.X.production.o
+__end_of_text_replace_prev_char D94 0 CODE 0 text2 dist/default/production\I2C_Slave.X.production.o
+process_key@key 6B 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+process_key@len 68 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__end_of_text_insert_char AA2 0 CODE 0 text3 dist/default/production\I2C_Slave.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-__end_of_memcpy A92 0 CODE 0 text8 dist/default/production\I2C_Slave.X.production.o
-__end_of_memset C3E 0 CODE 0 text6 dist/default/production\I2C_Slave.X.production.o
-__end_of_buzzer_beep B5A 0 CODE 0 text13 dist/default/production\I2C_Slave.X.production.o
-clear_ram0 D20 0 CODE 0 clrtext dist/default/production\I2C_Slave.X.production.o
+__end_of_memset CA8 0 CODE 0 text6 dist/default/production\I2C_Slave.X.production.o
+__end_of_buzzer_beep BC4 0 CODE 0 text11 dist/default/production\I2C_Slave.X.production.o
+clear_ram0 DC8 0 CODE 0 clrtext dist/default/production\I2C_Slave.X.production.o
 __pcstackBANK0 4A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-__end_of_process_key 240 0 CODE 0 text1 dist/default/production\I2C_Slave.X.production.o
+__end_of_process_key 48A 0 CODE 0 text1 dist/default/production\I2C_Slave.X.production.o
 _recvBuf AE 0 BANK1 1 bssBANK1 dist/default/production\I2C_Slave.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-text_insert_char@c 5B 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-text_insert_char@i 5C 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+text_insert_char@c 56 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+text_insert_char@i 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 BANK2 1 bank2 -
 __Hbank3 0 0 BANK3 1 bank3 -
-__Hcinit 58 0 CODE 0 cinit -
-__end_of_strlen B1C 0 CODE 0 text10 dist/default/production\I2C_Slave.X.production.o
-__end_of_I2C_Slave_Init B96 0 CODE 0 text22 dist/default/production\I2C_Slave.X.production.o
+__Hcinit 5C 0 CODE 0 cinit -
+__end_of_strlen B86 0 CODE 0 text9 dist/default/production\I2C_Slave.X.production.o
+__end_of_I2C_Slave_Init C02 0 CODE 0 text22 dist/default/production\I2C_Slave.X.production.o
 __Hstack 0 0 STACK 2 stack -
-__stringbase 862 0 STRING 0 strings dist/default/production\I2C_Slave.X.production.o
+__stringbase 936 0 STRING 0 strings dist/default/production\I2C_Slave.X.production.o
 _keyChars BC 0 BANK1 1 dataBANK1 dist/default/production\I2C_Slave.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
@@ -626,163 +623,154 @@ __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 BANK2 1 bank2 -
 __Lbank3 0 0 BANK3 1 bank3 -
-__Lcinit 22 0 CODE 0 cinit -
+__Lcinit 26 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
 __Linittext 0 0 ABS 0 inittext -
 _PORTAbits 5 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 _PORTCbits 7 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-memcpy@d1 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-memcpy@s1 56 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-process_key@chars 6D 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+process_key@chars 6A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hheap 0 0 HEAP 7 heap -
-__Hinit 1E 0 CODE 0 init -
+__Hinit 22 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
 __Hsfr3 0 0 ABS 0 sfr3 -
-__Hsivt 1E 0 CODE 0 sivt -
+__Hsivt 22 0 CODE 0 sivt -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
 __Lheap 0 0 HEAP 7 heap -
-__Linit 1E 0 CODE 0 init -
+__Linit 22 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
-__Lsivt 1E 0 CODE 0 sivt -
+__Lsivt 22 0 CODE 0 sivt -
 __Ltext 0 0 ABS 0 text -
-memcpy@d 5A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-memcpy@n 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-memcpy@s 5B 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-memset@dest 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-memset@c 56 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-memset@n 58 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-memset@p 5A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+memset@dest 50 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+memset@c 51 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+memset@n 53 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+memset@p 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_ISR 3C6 0 CODE 0 text23 dist/default/production\I2C_Slave.X.production.o
-__S0 6A0 0 ABS 0 - -
+_ISR 48A 0 CODE 0 text23 dist/default/production\I2C_Slave.X.production.o
+__S0 6F4 0 ABS 0 - -
 __S1 CC 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 saved_w 7E 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-i1_memcpy A92 0 CODE 0 text24 dist/default/production\I2C_Slave.X.production.o
-__end_of_ISR 4F6 0 CODE 0 text23 dist/default/production\I2C_Slave.X.production.o
-__end_of_text_clear_send C8C 0 CODE 0 text5 dist/default/production\I2C_Slave.X.production.o
+__end_of_ISR 5C8 0 CODE 0 text23 dist/default/production\I2C_Slave.X.production.o
+__end_of_text_clear_send D32 0 CODE 0 text5 dist/default/production\I2C_Slave.X.production.o
 _lastKey 2A 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
-_lcd_char D0C 0 CODE 0 text12 dist/default/production\I2C_Slave.X.production.o
-_lcd_init 608 0 CODE 0 text16 dist/default/production\I2C_Slave.X.production.o
+_lcd_char DB4 0 CODE 0 text15 dist/default/production\I2C_Slave.X.production.o
+_lcd_init 6DA 0 CODE 0 text16 dist/default/production\I2C_Slave.X.production.o
 _rxState 23 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-__stringtab 844 0 STRING 0 strings dist/default/production\I2C_Slave.X.production.o
-__end_ofi1_memcpy AD8 0 CODE 0 text24 dist/default/production\I2C_Slave.X.production.o
-_lcd_cmd B96 0 CODE 0 text17 dist/default/production\I2C_Slave.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-__end_of_lcd_send_nibble C66 0 CODE 0 text19 dist/default/production\I2C_Slave.X.production.o
-strlen@a 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-strlen@s 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__stringtab 918 0 STRING 0 strings dist/default/production\I2C_Slave.X.production.o
+_lcd_cmd C3A 0 CODE 0 text17 dist/default/production\I2C_Slave.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+__end_of_lcd_send_nibble D0C 0 CODE 0 text19 dist/default/production\I2C_Slave.X.production.o
+strlen@a 52 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+strlen@s 50 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __pdataBANK1 BC 0 BANK1 1 dataBANK1 dist/default/production\I2C_Slave.X.production.o
 ltemp0a 80 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-ISR@data 54 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-__end_of_lcd_char D20 0 CODE 0 text12 dist/default/production\I2C_Slave.X.production.o
+ISR@data 4E 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__end_of_lcd_char DC8 0 CODE 0 text15 dist/default/production\I2C_Slave.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
-__end_of_lcd_init 6CE 0 CODE 0 text16 dist/default/production\I2C_Slave.X.production.o
-___awmod@counter 59 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__end_of_lcd_init 7A2 0 CODE 0 text16 dist/default/production\I2C_Slave.X.production.o
+___awmod@counter 54 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-_lcd_send_byte 9FC 0 CODE 0 text18 dist/default/production\I2C_Slave.X.production.o
-lcd_send_byte@data 58 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-_memcpy A4C 0 CODE 0 text8 dist/default/production\I2C_Slave.X.production.o
-_memset C08 0 CODE 0 text6 dist/default/production\I2C_Slave.X.production.o
-__ptext10 AD8 0 CODE 0 text10 dist/default/production\I2C_Slave.X.production.o
-__ptext11 BD0 0 CODE 0 text11 dist/default/production\I2C_Slave.X.production.o
-__ptext12 D0C 0 CODE 0 text12 dist/default/production\I2C_Slave.X.production.o
-__ptext13 B1C 0 CODE 0 text13 dist/default/production\I2C_Slave.X.production.o
-__ptext14 9AC 0 CODE 0 text14 dist/default/production\I2C_Slave.X.production.o
-__ptext15 792 0 CODE 0 text15 dist/default/production\I2C_Slave.X.production.o
-__ptext16 608 0 CODE 0 text16 dist/default/production\I2C_Slave.X.production.o
-__ptext17 B96 0 CODE 0 text17 dist/default/production\I2C_Slave.X.production.o
-__ptext18 9FC 0 CODE 0 text18 dist/default/production\I2C_Slave.X.production.o
-__ptext19 C3E 0 CODE 0 text19 dist/default/production\I2C_Slave.X.production.o
-__ptext20 CEE 0 CODE 0 text20 dist/default/production\I2C_Slave.X.production.o
-__ptext21 6CE 0 CODE 0 text21 dist/default/production\I2C_Slave.X.production.o
-__ptext22 B5A 0 CODE 0 text22 dist/default/production\I2C_Slave.X.production.o
-__ptext23 3C6 0 CODE 0 text23 dist/default/production\I2C_Slave.X.production.o
-__ptext24 A92 0 CODE 0 text24 dist/default/production\I2C_Slave.X.production.o
-___awmod 792 0 CODE 0 text15 dist/default/production\I2C_Slave.X.production.o
-__pmaintext 240 0 CODE 0 maintext dist/default/production\I2C_Slave.X.production.o
+_lcd_send_byte AF2 0 CODE 0 text18 dist/default/production\I2C_Slave.X.production.o
+lcd_send_byte@data 54 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_memset C72 0 CODE 0 text6 dist/default/production\I2C_Slave.X.production.o
+__ptext10 C02 0 CODE 0 text10 dist/default/production\I2C_Slave.X.production.o
+__ptext11 B86 0 CODE 0 text11 dist/default/production\I2C_Slave.X.production.o
+__ptext12 AA2 0 CODE 0 text12 dist/default/production\I2C_Slave.X.production.o
+__ptext13 866 0 CODE 0 text13 dist/default/production\I2C_Slave.X.production.o
+__ptext14 CA8 0 CODE 0 text14 dist/default/production\I2C_Slave.X.production.o
+__ptext15 DB4 0 CODE 0 text15 dist/default/production\I2C_Slave.X.production.o
+__ptext16 6DA 0 CODE 0 text16 dist/default/production\I2C_Slave.X.production.o
+__ptext17 C3A 0 CODE 0 text17 dist/default/production\I2C_Slave.X.production.o
+__ptext18 AF2 0 CODE 0 text18 dist/default/production\I2C_Slave.X.production.o
+__ptext19 CDC 0 CODE 0 text19 dist/default/production\I2C_Slave.X.production.o
+__ptext20 D94 0 CODE 0 text20 dist/default/production\I2C_Slave.X.production.o
+__ptext21 7A2 0 CODE 0 text21 dist/default/production\I2C_Slave.X.production.o
+__ptext22 BC4 0 CODE 0 text22 dist/default/production\I2C_Slave.X.production.o
+__ptext23 48A 0 CODE 0 text23 dist/default/production\I2C_Slave.X.production.o
+___awmod 866 0 CODE 0 text13 dist/default/production\I2C_Slave.X.production.o
+__pmaintext 5C 0 CODE 0 maintext dist/default/production\I2C_Slave.X.production.o
 _rxExpected 25 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 __Hinittext 0 0 ABS 0 inittext -
-_lcd_set_cursor$356 5F 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-_text_clear_send C66 0 CODE 0 text5 dist/default/production\I2C_Slave.X.production.o
-_strlen AD8 0 CODE 0 text10 dist/default/production\I2C_Slave.X.production.o
-_lcd_send_nibble C3E 0 CODE 0 text19 dist/default/production\I2C_Slave.X.production.o
+lcd_send_nibble@tmp 53 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_lcd_set_cursor$353 5B 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_text_clear_send D0C 0 CODE 0 text5 dist/default/production\I2C_Slave.X.production.o
+_strlen B42 0 CODE 0 text9 dist/default/production\I2C_Slave.X.production.o
+_lcd_send_nibble CDC 0 CODE 0 text19 dist/default/production\I2C_Slave.X.production.o
 _sendBuf 3C 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
 _sendLen 2C 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
-__end_of__stringtab 864 0 STRING 0 strings dist/default/production\I2C_Slave.X.production.o
-_text_delete 8CA 0 CODE 0 text4 dist/default/production\I2C_Slave.X.production.o
+__end_of__stringtab 938 0 STRING 0 strings dist/default/production\I2C_Slave.X.production.o
+_text_delete 9C0 0 CODE 0 text4 dist/default/production\I2C_Slave.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-lcd_cmd@cmd 5D 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-init_fetch0 C8C 0 CODE 0 inittext dist/default/production\I2C_Slave.X.production.o
+lcd_cmd@cmd 59 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+init_fetch0 D32 0 CODE 0 inittext dist/default/production\I2C_Slave.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-__Lend_init 1E 0 CODE 0 end_init -
+__Lend_init 22 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-lcd_send_nibble@nibble 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-end_of_initialization 52 0 CODE 0 cinit dist/default/production\I2C_Slave.X.production.o
-__Hintentry 1E 0 CODE 0 intentry -
-_lcd_refresh 4F6 0 CODE 0 text9 dist/default/production\I2C_Slave.X.production.o
+lcd_send_nibble@nibble 52 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+end_of_initialization 56 0 CODE 0 cinit dist/default/production\I2C_Slave.X.production.o
+__Hintentry 22 0 CODE 0 intentry -
+_lcd_refresh 5C8 0 CODE 0 text8 dist/default/production\I2C_Slave.X.production.o
 __Lstrings 0 0 ABS 0 strings -
-?___awmod 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-lcd_char@c 5B 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+?___awmod 50 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+lcd_char@c 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
-lcd_send_byte@rs 5A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+lcd_send_byte@rs 56 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
-___awmod@dividend 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-__ptext1 58 0 CODE 0 text1 dist/default/production\I2C_Slave.X.production.o
-__ptext2 CCE 0 CODE 0 text2 dist/default/production\I2C_Slave.X.production.o
-__ptext3 946 0 CODE 0 text3 dist/default/production\I2C_Slave.X.production.o
-__ptext4 8CA 0 CODE 0 text4 dist/default/production\I2C_Slave.X.production.o
-__ptext5 C66 0 CODE 0 text5 dist/default/production\I2C_Slave.X.production.o
-__ptext6 C08 0 CODE 0 text6 dist/default/production\I2C_Slave.X.production.o
-__ptext7 D30 0 CODE 0 text7 dist/default/production\I2C_Slave.X.production.o
-__ptext8 A4C 0 CODE 0 text8 dist/default/production\I2C_Slave.X.production.o
-__ptext9 4F6 0 CODE 0 text9 dist/default/production\I2C_Slave.X.production.o
-_apply_case$440 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+___awmod@dividend 52 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__ptext1 27C 0 CODE 0 text1 dist/default/production\I2C_Slave.X.production.o
+__ptext2 D74 0 CODE 0 text2 dist/default/production\I2C_Slave.X.production.o
+__ptext3 A3C 0 CODE 0 text3 dist/default/production\I2C_Slave.X.production.o
+__ptext4 9C0 0 CODE 0 text4 dist/default/production\I2C_Slave.X.production.o
+__ptext5 D0C 0 CODE 0 text5 dist/default/production\I2C_Slave.X.production.o
+__ptext6 C72 0 CODE 0 text6 dist/default/production\I2C_Slave.X.production.o
+__ptext7 DD8 0 CODE 0 text7 dist/default/production\I2C_Slave.X.production.o
+__ptext8 5C8 0 CODE 0 text8 dist/default/production\I2C_Slave.X.production.o
+__ptext9 B42 0 CODE 0 text9 dist/default/production\I2C_Slave.X.production.o
+_apply_case$437 52 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_lcd_set_cursor BD0 0 CODE 0 text11 dist/default/production\I2C_Slave.X.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-___heap_lo 0 0 ABS 0 - C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-__end_of__initialization 52 0 CODE 0 cinit dist/default/production\I2C_Slave.X.production.o
-___awmod@divisor 55 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_lcd_set_cursor C02 0 CODE 0 text10 dist/default/production\I2C_Slave.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+__end_of__initialization 56 0 CODE 0 cinit dist/default/production\I2C_Slave.X.production.o
+___awmod@divisor 50 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK1 CAE 0 CODE 0 idataBANK1 dist/default/production\I2C_Slave.X.production.o
+__pidataBANK1 D54 0 CODE 0 idataBANK1 dist/default/production\I2C_Slave.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-_apply_case 9AC 0 CODE 0 text14 dist/default/production\I2C_Slave.X.production.o
-__end_of_lcd_send_byte A4C 0 CODE 0 text18 dist/default/production\I2C_Slave.X.production.o
+_apply_case AA2 0 CODE 0 text12 dist/default/production\I2C_Slave.X.production.o
+__end_of_lcd_send_byte B42 0 CODE 0 text18 dist/default/production\I2C_Slave.X.production.o
 __pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\I2C_Slave.X.production.o
 wtemp0a 7F 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-__end_of_kb_scan 792 0 CODE 0 text21 dist/default/production\I2C_Slave.X.production.o
+__end_of_kb_scan 866 0 CODE 0 text21 dist/default/production\I2C_Slave.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-__Hend_init 22 0 CODE 0 end_init -
-init_ram0 C94 0 CODE 0 inittext dist/default/production\I2C_Slave.X.production.o
-__end_of_main 3C6 0 CODE 0 maintext dist/default/production\I2C_Slave.X.production.o
-i1memcpy@d1 4A 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-i1memcpy@s1 4B 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__Hend_init 26 0 CODE 0 end_init -
+init_ram0 D3A 0 CODE 0 inittext dist/default/production\I2C_Slave.X.production.o
+process_key@k 69 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+__end_of_main 27C 0 CODE 0 maintext dist/default/production\I2C_Slave.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
@@ -793,29 +781,29 @@ __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\I2C_Slave.X.production.o
 _rxIdx 24 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
-_rxTmp A0 0 BANK1 1 bssBANK1 dist/default/production\I2C_Slave.X.production.o
-_txBuf 2E 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
+_rxTmp 2E 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
+_txBuf A0 0 BANK1 1 bssBANK1 dist/default/production\I2C_Slave.X.production.o
 _txIdx 27 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
 _txLen 28 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\I2C_Slave.X.production.o
-__end_of_lcd_set_cursor C08 0 CODE 0 text11 dist/default/production\I2C_Slave.X.production.o
+__end_of_lcd_set_cursor C3A 0 CODE 0 text10 dist/default/production\I2C_Slave.X.production.o
 _uppercase 2B 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
-text_delete@i 57 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
-_buzzer_beep B1C 0 CODE 0 text13 dist/default/production\I2C_Slave.X.production.o
-__end_of_multitap_commit D40 0 CODE 0 text7 dist/default/production\I2C_Slave.X.production.o
-__initialization 22 0 CODE 0 cinit dist/default/production\I2C_Slave.X.production.o
+text_delete@i 52 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave.X.production.o
+_buzzer_beep B86 0 CODE 0 text11 dist/default/production\I2C_Slave.X.production.o
+__end_of_multitap_commit DE8 0 CODE 0 text7 dist/default/production\I2C_Slave.X.production.o
+__initialization 26 0 CODE 0 cinit dist/default/production\I2C_Slave.X.production.o
 btemp0 7E 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 btemp1 7F 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave.X.production.o
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\I2C_Slave.X.production.o
-__pstrings 844 0 STRING 0 strings dist/default/production\I2C_Slave.X.production.o
-_process_key 58 0 CODE 0 text1 dist/default/production\I2C_Slave.X.production.o
+__pstrings 918 0 STRING 0 strings dist/default/production\I2C_Slave.X.production.o
+_process_key 27C 0 CODE 0 text1 dist/default/production\I2C_Slave.X.production.o
 ttemp0a 7F 0 ABS 0 - dist/default/production\I2C_Slave.X.production.o
-_lcd_pulse_enable CEE 0 CODE 0 text20 dist/default/production\I2C_Slave.X.production.o
-___int_stack_hi 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
-___int_stack_lo 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\driver_tmp_12.o
+_lcd_pulse_enable D94 0 CODE 0 text20 dist/default/production\I2C_Slave.X.production.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs2mo.0\driver_tmp_12.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -841,12 +829,12 @@ ___int_stack_lo 0 0 STACK 2 stack C:\Users\irmin\AppData\Local\Temp\xcAs16es.0\d
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text4 0 465 8CA 23B 2
-intentry 0 4 8 41E 2
+text4 0 4E0 9C0 214 2
+intentry 0 4 8 488 2
 reset_vec 0 0 0 2 2
-bssBANK0 1 20 20 53 1
+bssBANK0 1 20 20 51 1
 bssBANK1 1 A0 A0 2C 1
-strings 0 422 844 43 2
+strings 0 48C 918 54 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

@@ -1,6 +1,6 @@
 
 16F873A Memory Summary:
-    Program space        used   6E3h (  1763) of  1000h words   ( 43.0%)
+    Program space        used   705h (  1797) of  1000h words   ( 43.9%)
     Data space           used    64h (   100) of    C0h bytes   ( 52.1%)
     EEPROM space         used     0h (     0) of    80h bytes   (  0.0%)
     Configuration bits   used     1h (     1) of     1h word    (100.0%)
